@@ -88,7 +88,7 @@ CSV_OUTPUT_USERS_AUDIT = 'csv_output_users_audit'
 CUSTOMER_ID = 'customer_id'
 # If debug_level > 0: extra_args['prettyPrint'] = True, httplib2.debuglevel = gam_debug_level, appsObj.debug = True
 DEBUG_LEVEL = 'debug_level'
-# When retrieving lists of ChromeOS/Mobile devices from API, how many should be retrieved in each chunk
+# When retrieving lists of ChromeOS devices from API, how many should be retrieved in each chunk
 DEVICE_MAX_RESULTS = 'device_max_results'
 # Domain obtained from gam.cfg or oauth2.txt
 DOMAIN = 'domain'
@@ -112,6 +112,8 @@ MEMBER_MAX_RESULTS = 'member_max_results'
 MESSAGE_BATCH_SIZE = 'message_batch_size'
 # When retrieving lists of Gmail messages from API, how many should be retrieved in each chunk
 MESSAGE_MAX_RESULTS = 'message_max_results'
+# When retrieving lists of Mobile devices from API, how many should be retrieved in each chunk
+MOBILE_MAX_RESULTS = 'mobile_max_results'
 # Value to substitute for NEVER_TIME
 NEVER_TIME = 'never_time'
 # If no_browser is False, writeCSVfile won't open a browser when todrive is set
@@ -146,11 +148,13 @@ SHOW_GETTINGS_GOT_NL = 'show_gettings_got_nl'
 # Enable/disable showing multiprocess info in redirected stdout/stderr
 SHOW_MULTIPROCESS_INFO = 'show_multiprocess_info'
 ## Minimum TLS Version required for HTTPS connections
-#TLS_MIN_VERSION = 'tls_min_ver'
+TLS_MIN_VERSION = 'tls_min_version'
 ## Maximum TLS Version used for HTTPS connections
-#TLS_MAX_VERSION = 'tls_max_ver'
+TLS_MAX_VERSION = 'tls_max_version'
 # Time Zone
 TIMEZONE = 'timezone'
+# Use client access for todrive
+TODRIVE_CLIENTACCESS = 'todrive_clientaccess'
 # Enable conversion to Google Sheets when uploading todrive files
 TODRIVE_CONVERSION = 'todrive_conversion'
 # Suppress opening browser on todrive upload
@@ -196,7 +200,7 @@ Defaults = {
   CSV_OUTPUT_USERS_AUDIT: FALSE,
   CUSTOMER_ID: MY_CUSTOMER,
   DEBUG_LEVEL: '0',
-  DEVICE_MAX_RESULTS: '500',
+  DEVICE_MAX_RESULTS: '200',
   DOMAIN: '',
   DRIVE_DIR: '',
   DRIVE_MAX_RESULTS: '1000',
@@ -208,6 +212,7 @@ Defaults = {
   MEMBER_MAX_RESULTS: '200',
   MESSAGE_BATCH_SIZE: '50',
   MESSAGE_MAX_RESULTS: '500',
+  MOBILE_MAX_RESULTS: '100',
   NEVER_TIME: NEVER,
   NO_BROWSER: FALSE,
   NO_CACHE: FALSE,
@@ -224,9 +229,10 @@ Defaults = {
   SHOW_GETTINGS: TRUE,
   SHOW_GETTINGS_GOT_NL: FALSE,
   SHOW_MULTIPROCESS_INFO: FALSE,
-  #TLS_MIN_VERSION: 'TLSv1_2',
-  #TLS_MAX_VERSION: '',
+  TLS_MIN_VERSION: '',
+  TLS_MAX_VERSION: '',
   TIMEZONE: 'utc',
+  TODRIVE_CLIENTACCESS: FALSE,
   TODRIVE_CONVERSION: TRUE,
   TODRIVE_NOBROWSER: '',
   TODRIVE_NOEMAIL: '',
@@ -270,7 +276,7 @@ VAR_INFO = {
   API_CALLS_RATE_LIMIT: {VAR_TYPE: TYPE_INTEGER, VAR_LIMITS: (50, None)},
   AUTO_BATCH_MIN: {VAR_TYPE: TYPE_INTEGER, VAR_ENVVAR: 'GAM_AUTOBATCH', VAR_LIMITS: (0, 100)},
   BATCH_SIZE: {VAR_TYPE: TYPE_INTEGER, VAR_ENVVAR: 'GAM_BATCH_SIZE', VAR_LIMITS: (1, 1000)},
-  CACERTS_PEM: {VAR_TYPE: TYPE_FILE, VAR_ACCESS: os.R_OK},
+  CACERTS_PEM: {VAR_TYPE: TYPE_FILE, VAR_ENVVAR: 'GAM_CA_FILE', VAR_ACCESS: os.R_OK},
   CACHE_DIR: {VAR_TYPE: TYPE_DIRECTORY, VAR_ENVVAR: 'GAMCACHEDIR'},
   CACHE_DISCOVERY_ONLY: {VAR_TYPE: TYPE_BOOLEAN, VAR_SIGFILE: 'allcache.txt', VAR_SFFT: (TRUE, FALSE)},
   CHARSET: {VAR_TYPE: TYPE_STRING, VAR_ENVVAR: 'GAM_CHARSET', VAR_LIMITS: (1, None)},
@@ -290,7 +296,7 @@ VAR_INFO = {
   CSV_OUTPUT_USERS_AUDIT: {VAR_TYPE: TYPE_BOOLEAN},
   CUSTOMER_ID: {VAR_TYPE: TYPE_STRING, VAR_ENVVAR: 'CUSTOMER_ID', VAR_LIMITS: (0, None)},
   DEBUG_LEVEL: {VAR_TYPE: TYPE_INTEGER, VAR_SIGFILE: 'debug.gam', VAR_LIMITS: (0, None), VAR_SFFT: ('0', '4')},
-  DEVICE_MAX_RESULTS: {VAR_TYPE: TYPE_INTEGER, VAR_ENVVAR: 'GAM_DEVICE_MAX_RESULTS', VAR_LIMITS: (1, 1000)},
+  DEVICE_MAX_RESULTS: {VAR_TYPE: TYPE_INTEGER, VAR_ENVVAR: 'GAM_DEVICE_MAX_RESULTS', VAR_LIMITS: (1, 200)},
   DOMAIN: {VAR_TYPE: TYPE_STRING, VAR_ENVVAR: 'GA_DOMAIN', VAR_LIMITS: (0, None)},
   DRIVE_DIR: {VAR_TYPE: TYPE_DIRECTORY, VAR_ENVVAR: 'GAMDRIVEDIR'},
   DRIVE_MAX_RESULTS: {VAR_TYPE: TYPE_INTEGER, VAR_ENVVAR: 'GAM_DRIVE_MAX_RESULTS', VAR_LIMITS: (1, 1000)},
@@ -299,9 +305,10 @@ VAR_INFO = {
   EVENT_MAX_RESULTS: {VAR_TYPE: TYPE_INTEGER, VAR_LIMITS: (1, 2500)},
   EXTRA_ARGS: {VAR_TYPE: TYPE_FILE, VAR_SIGFILE: FN_EXTRA_ARGS_TXT, VAR_SFFT: ('', FN_EXTRA_ARGS_TXT), VAR_ACCESS: os.R_OK},
   INTER_BATCH_WAIT: {VAR_TYPE: TYPE_FLOAT, VAR_LIMITS: (0.0, 60.0)},
-  MEMBER_MAX_RESULTS: {VAR_TYPE: TYPE_INTEGER, VAR_LIMITS: (1, 10000)},
+  MEMBER_MAX_RESULTS: {VAR_TYPE: TYPE_INTEGER, VAR_LIMITS: (1, 200)},
   MESSAGE_BATCH_SIZE: {VAR_TYPE: TYPE_INTEGER, VAR_LIMITS: (1, 1000)},
   MESSAGE_MAX_RESULTS: {VAR_TYPE: TYPE_INTEGER, VAR_LIMITS: (1, 10000)},
+  MOBILE_MAX_RESULTS: {VAR_TYPE: TYPE_INTEGER, VAR_ENVVAR: 'GAM_MOBILE_MAX_RESULTS', VAR_LIMITS: (1, 100)},
   NEVER_TIME: {VAR_TYPE: TYPE_STRING, VAR_LIMITS: (0, None)},
   NO_BROWSER: {VAR_TYPE: TYPE_BOOLEAN, VAR_SIGFILE: 'nobrowser.txt', VAR_SFFT: (FALSE, TRUE)},
   NO_CACHE: {VAR_TYPE: TYPE_BOOLEAN, VAR_SIGFILE: 'nocache.txt', VAR_SFFT: (FALSE, TRUE)},
@@ -318,9 +325,10 @@ VAR_INFO = {
   SHOW_GETTINGS: {VAR_TYPE: TYPE_BOOLEAN},
   SHOW_GETTINGS_GOT_NL: {VAR_TYPE: TYPE_BOOLEAN},
   SHOW_MULTIPROCESS_INFO: {VAR_TYPE: TYPE_BOOLEAN},
-  #TLS_MIN_VERSION: {VAR_TYPE: TYPE_STRING, VAR_LIMITS: (0, None)},
-  #TLS_MAX_VERSION: {VAR_TYPE: TYPE_STRING, VAR_LIMITS: (0, None)},
+  TLS_MIN_VERSION: {VAR_TYPE: TYPE_STRING, VAR_ENVVAR: 'GAM_TLS_MIN_VERSION', VAR_LIMITS: (0, None)},
+  TLS_MAX_VERSION: {VAR_TYPE: TYPE_STRING, VAR_ENVVAR: 'GAM_TLS_MAX_VERSION', VAR_LIMITS: (0, None)},
   TIMEZONE: {VAR_TYPE: TYPE_TIMEZONE},
+  TODRIVE_CLIENTACCESS: {VAR_TYPE: TYPE_BOOLEAN},
   TODRIVE_CONVERSION: {VAR_TYPE: TYPE_BOOLEAN},
   TODRIVE_NOBROWSER: {VAR_TYPE: TYPE_BOOLEAN, VAR_SIGFILE: 'nobrowser.txt', VAR_SFFT: (FALSE, TRUE)},
   TODRIVE_NOEMAIL: {VAR_TYPE: TYPE_BOOLEAN},

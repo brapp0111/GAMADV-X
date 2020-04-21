@@ -1,33 +1,38 @@
-rmdir /q /s gamadv-x
-rmdir /q /s gamadv-x-64
-rmdir /q /s build
-rmdir /q /s dist
-del /q /f gamadv-x-%1-windows.zip
-del /q /f gamadv-x-%1-windows-x64.zip
-del /q /f gamadv-x-%1-windows-x64.msi
-del /q /f *.wixobj
-del /q /f *.wixpdb
-
+set GAMPLATFORM=gamadv-x
+set GAMVERSION=%1
 set WIXVERSION=3.11
 
-c:\python27-32\scripts\pyinstaller --clean -F --distpath=gamadv-x windows-gam.spec
-xcopy LICENSE gamadv-x\
-xcopy license.rtf gamadv-x\
-xcopy gam-setup.bat gamadv-x\
-xcopy Gam*.txt gamadv-x\
-xcopy cacerts.pem gamadv-x\
-del gamadv-x\w9xpopen.exe
-"%ProgramFiles%\7-Zip\7z.exe" a -tzip gamadv-x-%1-windows.zip gamadv-x\ -xr!.svn
+rmdir /q /s build
+rmdir /q /s dist
+del /q /f %GAMPLATFORM%-%GAMVERSION%-windows-x86.zip
+del /q /f %GAMPLATFORM%-%GAMVERSION%-windows-x86.msi
+del /q /f %GAMPLATFORM%-%GAMVERSION%-windows-x86_64.zip
+del /q /f %GAMPLATFORM%-%GAMVERSION%-windows-x86_64.msi
 
-c:\python27-64\scripts\pyinstaller --clean -F --distpath=gamadv-x-64 windows-gam.spec
-xcopy LICENSE gamadv-x-64\
-xcopy license.rtf gamadv-x-64\
-xcopy gam-setup.bat gamadv-x-64\
-xcopy Gam*.txt gamadv-x-64\
-xcopy cacerts.pem gamadv-x-64\
-"%ProgramFiles%\7-Zip\7z.exe" a -tzip gamadv-x-%1-windows-x64.zip gamadv-x-64\ -xr!.svn
+rmdir /q /s %GAMPLATFORM%
+c:\python27-32\scripts\pyinstaller --clean --noupx -F --distpath=%GAMPLATFORM% windows-gam.spec
+xcopy LICENSE %GAMPLATFORM%\
+xcopy license.rtf %GAMPLATFORM%\
+xcopy gam-setup.bat %GAMPLATFORM%\
+xcopy Gam*.txt %GAMPLATFORM%\
+xcopy cacerts.pem %GAMPLATFORM%\
+"%ProgramFiles%\7-Zip\7z.exe" a -tzip %GAMPLATFORM%-%GAMVERSION%-windows-x86.zip %GAMPLATFORM%\ -xr!.svn
+del /q /f *.wixobj
+del /q /f *.wixpdb
+"%ProgramFiles(x86)%\WiX Toolset v%WIXVERSION%\bin\candle.exe" -arch x86 gam.wxs
+"%ProgramFiles(x86)%\WiX Toolset v%WIXVERSION%\bin\light.exe" -ext "%ProgramFiles(x86)%\WiX Toolset v%WIXVERSION%\bin\WixUIExtension.dll" gam.wixobj -o %GAMPLATFORM%-%GAMVERSION%-windows-x86.msi
+del /q /f *.wixpdb
 
-set GAMVERSION=%1
+rmdir /q /s %GAMPLATFORM%
+c:\python27-64\scripts\pyinstaller --clean --noupx -F --distpath=%GAMPLATFORM% windows-gam.spec
+xcopy LICENSE %GAMPLATFORM%\
+xcopy license.rtf %GAMPLATFORM%\
+xcopy gam-setup.bat %GAMPLATFORM%\
+xcopy Gam*.txt %GAMPLATFORM%\
+xcopy cacerts.pem %GAMPLATFORM%\
+"%ProgramFiles%\7-Zip\7z.exe" a -tzip %GAMPLATFORM%-%GAMVERSION%-windows-x86_64.zip %GAMPLATFORM%\ -xr!.svn
+del /q /f *.wixobj
+del /q /f *.wixpdb
 "%ProgramFiles(x86)%\WiX Toolset v%WIXVERSION%\bin\candle.exe" -arch x64 gam.wxs
-"%ProgramFiles(x86)%\WiX Toolset v%WIXVERSION%\bin\light.exe" -ext "%ProgramFiles(x86)%\WiX Toolset v%WIXVERSION%\bin\WixUIExtension.dll" gam.wixobj -o gamadv-x-%1-windows-x64.msi
-del /q /f gamadv-x-%1-windows-x64.wixpdb
+"%ProgramFiles(x86)%\WiX Toolset v%WIXVERSION%\bin\light.exe" -ext "%ProgramFiles(x86)%\WiX Toolset v%WIXVERSION%\bin\WixUIExtension.dll" gam.wixobj -o %GAMPLATFORM%-%GAMVERSION%-windows-x86_64.msi
+del /q /f *.wixpdb

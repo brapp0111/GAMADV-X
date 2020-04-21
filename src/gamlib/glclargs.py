@@ -63,6 +63,9 @@ class GamCLArgs(object):
   ENTITY_TEACHERS = 'teachers'
   ENTITY_USER = 'user'
   ENTITY_USERS = 'users'
+  ENTITY_USERS_NS = 'users_ns'
+  ENTITY_USERS_NS_SUSP = 'users_ns_susp'
+  ENTITY_USERS_SUSP = 'users_susp'
 #
   CROS_ENTITIES = [
     ENTITY_CROS,
@@ -159,6 +162,7 @@ class GamCLArgs(object):
 # CL entity source selectors
   ENTITY_SELECTOR_ALL = 'all'
   ENTITY_SELECTOR_CSV = 'csv'
+  ENTITY_SELECTOR_CSVDATAFILE = 'csvdatafile'
   ENTITY_SELECTOR_CSVFILE = 'csvfile'
   ENTITY_SELECTOR_FILE = 'file'
   ENTITY_SELECTOR_DATAFILE = 'datafile'
@@ -174,9 +178,10 @@ class GamCLArgs(object):
   ENTITY_SELECTOR_CROSCSVDATA = 'croscsvdata'
 #
   SERVICE_ACCOUNT_ONLY_ENTITY_SELECTORS = [
-    ENTITY_SELECTOR_DATAFILE,
+    ENTITY_SELECTOR_CSVDATAFILE,
     ENTITY_SELECTOR_CSVKMD,
     ENTITY_SELECTOR_CSVSUBKEY,
+    ENTITY_SELECTOR_DATAFILE,
     ]
   ENTITY_LIST_SELECTORS = [
     ENTITY_SELECTOR_CSVKMD,
@@ -188,9 +193,10 @@ class GamCLArgs(object):
     ]
   BASE_ENTITY_SELECTORS = [
     ENTITY_SELECTOR_ALL,
-    ENTITY_SELECTOR_DATAFILE,
+    ENTITY_SELECTOR_CSVDATAFILE,
     ENTITY_SELECTOR_CSVKMD,
     ENTITY_SELECTOR_CSVSUBKEY,
+    ENTITY_SELECTOR_DATAFILE,
     ]
   CROS_ENTITY_SELECTORS = [
     ENTITY_SELECTOR_CROSCSV,
@@ -217,14 +223,30 @@ class GamCLArgs(object):
     ]
   USER_ENTITY_SELECTOR_ALL_SUBTYPES = [
     ENTITY_USERS,
+    ENTITY_USERS_NS,
+    ENTITY_USERS_NS_SUSP,
+    ENTITY_USERS_SUSP,
     ]
 #
   ENTITY_ALL_CROS = ENTITY_SELECTOR_ALL+' '+ENTITY_CROS
   ENTITY_ALL_USERS = ENTITY_SELECTOR_ALL+' '+ENTITY_USERS
+  ENTITY_ALL_USERS_NS = ENTITY_SELECTOR_ALL+' '+ENTITY_USERS_NS
+  ENTITY_ALL_USERS_NS_SUSP = ENTITY_SELECTOR_ALL+' '+ENTITY_USERS_NS_SUSP
+  ENTITY_ALL_USERS_SUSP = ENTITY_SELECTOR_ALL+' '+ENTITY_USERS_SUSP
+#
+  ALL_USERS_QUERY_MAP = {
+    ENTITY_ALL_USERS: 'isSuspended=False',
+    ENTITY_ALL_USERS_NS: 'isSuspended=False',
+    ENTITY_ALL_USERS_NS_SUSP: None,
+    ENTITY_ALL_USERS_SUSP: 'isSuspended=True',
+  }
 #
   ENTITY_SELECTOR_ALL_SUBTYPES_MAP = {
     ENTITY_CROS: ENTITY_ALL_CROS,
     ENTITY_USERS: ENTITY_ALL_USERS,
+    ENTITY_USERS_NS: ENTITY_ALL_USERS_NS,
+    ENTITY_USERS_NS_SUSP: ENTITY_ALL_USERS_NS_SUSP,
+    ENTITY_USERS_SUSP: ENTITY_ALL_USERS_SUSP,
     }
 # Allowed values for CL source selector datafile, csvkmd
   CROS_ENTITY_SELECTOR_DATAFILE_CSVKMD_SUBTYPES = [
@@ -263,11 +285,12 @@ class GamCLArgs(object):
   CSV_CMD = 'csv'
   LOOP_CMD = 'loop'
   TBATCH_CMD = 'tbatch'
-# Command line select/config/redirect arguments
+# Command line select/selectfilter/config/redirect arguments
   SELECT_CMD = 'select'
+  SELECTFILTER_CMD = 'selectfilter'
   CONFIG_CMD = 'config'
   REDIRECT_CMD = 'redirect'
-  GAM_META_COMMANDS = [SELECT_CMD, CONFIG_CMD, REDIRECT_CMD,]
+  GAM_META_COMMANDS = [SELECT_CMD, SELECTFILTER_CMD, CONFIG_CMD, REDIRECT_CMD,]
 # Command line arguments
   ARG_3LO = '3lo'
   ARG_ACL = 'acl'
@@ -317,6 +340,7 @@ class GamCLArgs(object):
   ARG_COURSEANNOUNCEMENTS = 'courseannouncements'
   ARG_COURSEPARTICIPANTS = 'courseparticipants'
   ARG_COURSESUBMISSIONS = 'coursesubmissions'
+  ARG_COURSETOPICS = 'coursetopics'
   ARG_COURSEWORK = 'coursework'
   ARG_CROS = 'cros'
   ARG_CROSES = 'croses'
@@ -362,6 +386,7 @@ class GamCLArgs(object):
   ARG_FORWARDINGADDRESS = 'forwardingaddress'
   ARG_FORWARDINGADDRESSES = 'forwardingaddresses'
   ARG_GAL = 'gal'
+  ARG_GMAIL = 'gmail'
   ARG_GMAILPROFILE = 'gmailprofile'
   ARG_GROUP = 'group'
   ARG_GROUPS = 'groups'
@@ -509,6 +534,7 @@ class GamCLArgs(object):
   OB_COURSE_STATE_LIST = "CourseStateList"
   OB_COURSE_SUBMISSION_ID_ENTITY = "CourseSubmissionIDEntity"
   OB_COURSE_SUBMISSION_STATE_LIST = "CourseSubmissionStateList"
+  OB_COURSE_TOPIC_ID_ENTITY = "CourseTopicIDEntity"
   OB_COURSE_WORK_ID_ENTITY = 'CourseWorkIDEntity'
   OB_COURSE_WORK_STATE_LIST = "CourseWorkStateList"
   OB_CROS_DEVICE_ENTITY = 'CrOSDeviceEntity'
@@ -552,6 +578,7 @@ class GamCLArgs(object):
   OB_GROUP_ENTITY = 'GroupEntity'
   OB_GROUP_ITEM = 'GroupItem'
   OB_GROUP_ROLE_LIST = 'GroupRoleList'
+  OB_GROUP_TYPE_LIST = 'GroupTypeList'
   OB_GUARDIAN_INVITATION_ID = 'GuardianInvitationID'
   OB_GUARDIAN_INVITATION_ID_ENTITY = 'GuardianInvitationIDEntity'
   OB_GUARDIAN_ENTITY = 'GuardianEntity'
@@ -560,11 +587,13 @@ class GamCLArgs(object):
   OB_HOLD_ITEM = 'HoldItem'
   OB_HOST_NAME = 'HostName'
   OB_ICALUID = 'iCalUID'
+  OB_ID_TOKEN = 'IDToken'
   OB_JOB_ID = 'JobID'
   OB_JOB_OR_PRINTER_ID = 'JobID|PrinterID'
   OB_JSON_DATA = 'JSONData'
   OB_LABEL_COLOR_HEX = 'LabelColorHex'
   OB_LABEL_NAME = 'LabelName'
+  OB_LABEL_NAME_LIST = 'LabelNameList'
   OB_LABEL_REPLACEMENT = 'LabelReplacement'
   OB_LANGUAGE_LIST = 'LanguageList'
   OB_MATTER_ITEM = 'MatterItem'
@@ -618,6 +647,7 @@ class GamCLArgs(object):
   OB_SPREADSHEET_JSON_UPDATEREQUEST = 'SpreadsheetJSONUpdateRequest'
   OB_SPREADSHEET_JSON_VALUES = 'SpreadsheetJSONValues'
   OB_SPREADSHEET_RANGE = 'SpreadsheetRange'
+  OB_STATE_NAME_LIST = "StateNameList"
   OB_STRING = 'String'
   OB_STUDENT_ITEM = 'StudentItem'
   OB_TAG = 'Tag'
@@ -727,16 +757,7 @@ class GamCLArgs(object):
 
 # Concatenate list members, any item containing spaces is enclosed in ""
   def QuotedArgumentList(self, items):
-    qstr = ''
-    for item in items:
-      if isinstance(item, str):
-        item = unicode(item, self.encoding, 'replace')
-      if item and (item.find(' ') == -1) and (item.find(',') == -1):
-        qstr += item
-      else:
-        qstr += '"'+item+'"'
-      qstr += ' '
-    return qstr[:-1] if len(qstr) > 0 else ''
+    return ' '.join([item if item and (item.find(' ') == -1) and (item.find(',') == -1) else '"'+item+'"' for item in items])
 
 # Mark bad argument in command line
   def CommandLineWithBadArgumentMarked(self, extraneous):

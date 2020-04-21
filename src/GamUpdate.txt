@@ -1,3 +1,573 @@
+4.94.10
+
+When `show_gettings_got_nl = false` in `gam.cfg`, short `Got NN ...` lines were not completely
+overwriting a longer previous line; this is fixed.
+
+4.94.09
+
+Changed `gam report` to show running total in `Got N Activities\Reports ...`.
+
+4.94.08
+
+Skipped.
+
+4.94.07
+
+Skipped.
+
+4.94.06
+
+Handle trap when a CSV file contains a NULL byte in the header row.
+
+4.94.05
+
+Skipped.
+
+4.94.04
+
+Following Jay's lead, added additional platform information to `gam version`.
+
+4.94.03
+
+Skipped.
+
+4.94.02
+
+When `gam oauth create` is issued and `no_browser = true`, GAM indicates where the `gamoauthurl.txt` file is located
+to simplify copying the long URL from the file rather than the screen. This is most useful with older versions of Command Prompt
+and PowerShell which can't properly copy/paste multi line strings.
+
+4.94.01
+
+Fixed bug in `gam info mobile` that caused a trap.
+
+4.94.00
+
+Following Jay's lead, added additional validation code to `gam check serviceaccount`.
+
+4.93.02
+
+Added option `timeoffset` to `gam version`; this causes GAM to display the difference between
+the local system time (in UTC) and Google's time (in UTC). If the difference is more than 30 seconds,
+you should correct the local system time; otherwise you might Google API errors due to the time difference.
+
+Following Jay's lead, added additional validation code to `gam check serviceaccount`.
+
+4.93.01
+
+Skipped.
+
+4.93.00
+
+Added option `matterstate <MatterStateList>` to `gam print/show vaultnatters` to allow
+display of Vault matters filtered by state.
+See: https://github.com/taers232c/GAMADV-X/wiki/Vault#display-vault-matters
+
+Added option `exportstatus <ExportStatusList>` to `gam print/show vaultexports` to allow
+display of Vault exports filtered by status.
+See: https://github.com/taers232c/GAMADV-X/wiki/Vault#display-vault-exports
+
+4.90.09
+
+The CrOS device field `autoUpdateExpiration` will now be displayed as a date: `YYYY-MM-DD`.
+
+Added options `addcontactgroup <ContactGroupItem>` and `removecontactgroup <ContactGroupItem>` to
+`gam <UserTypeEntity> update contacts`. This allows you add and remove contact groups from a contact
+without having to specify the entire contact group list. You can add and/or remove multiple contact
+groups in a single command.
+
+4.90.08
+
+Allow for empty `recoveryemail` and `recoveryphone`.
+
+4.90.07
+
+Added code to help Windows users address `gam oauth create` issues. When you do `gam ouath create`,
+the URL generated to authenticate the scopes is over 2500 characters long; Internet Explorer and Edge
+can not take a URL that long on the command line and cause an error. The quick fix is to do
+`gam config no_browser true oauth create` and copy/paste the long URL into the browser of your choice.
+Unfortunately, older versions of Command Prompt and PowerShell don't properly copy/paste multi line strings so you're still stuck.
+Now, GAM writes the long URL into the file `gamoauthurl.txt` in the folder with the GAM executable.
+You can open the file with Notepad/Wordpad, do a control-A to select the text, control-C to copy the text,
+start a browser and paste the URL (control-V) into the address bar. Authenticate and copy the Verification code
+back to your Command Prompt/PowerShell window.
+
+4.90.06
+
+Added additional attributes to `<UserBasicAttribute>`: `recoveryemail <EmailAddress>` and `recoveryphone <string>`.
+* `recoveryphone <string>` must contain a country code.
+Added additional fields to `<UserFieldName>`: `recoveryemail` and `recoveryphone`.
+
+4.90.05
+
+Added additional fields to `<CrOSFieldName>`: `autoupdateexpiration, dockmacaddress, ethernetmacaddress0`, manufacturedate`.
+`autoupdateexpiration` will be most useful with `gam print cros` as it should eliminate the need for the `guessaue` option.
+
+4.90.04
+
+Handle additional errors in `gam calendars <CalendarEntity> modify` and `gam <UserTypeEntity> modify calendars`.
+
+4.90.03
+
+Added `mobile_max_results` to `gam.cfg`; when retrieving lists of mobile devices from the API,
+how many should be retrieved in each chunk. The default and maximum is 100.
+
+4.90.02
+
+Update `gam <UserTypeEntity> print/show groups` to handle case where a user in a group has no role.
+
+4.90.01
+
+Added commands to show group membership for a user. By default, all groups to which a member belongs are displayed;
+you can restrict the display to those groups for which the user has a specific role. You can also restrict
+the display to groups within a specific domain.
+gam <UserTypeEntity> print groups [roles <GroupRoleList>] [domain <DomainName>] [todrive <ToDriveAttributes>*]
+gam <UserTypeEntity> show groups [roles <GroupRoleList>] [domain <DomainName>]
+For example: gam user user@domain.com show groups roles owner,manager
+
+4.90.00
+
+Added the `selectfilter <Section>` meta command to allow selection pf predefined CSV output filters.
+The only `<VariableName>`s recognized in this `<Section>` are: `csv_output_header_filter` and `csv_output_row_filter`.
+You can use this meta command by itself:
+gam selectfilter LastLoginTimeFilter print users fields primaryemail,lastlogintime
+You can combine the `select` and `selectfilter` meta commands:
+gam select Domain1 selectfilter LastLoginTimeFilter print users fields primaryemail,lastlogintime
+
+4.89.09
+
+Handle inappropriate error when Gam has to update oauth2.txt after an upgrade.
+
+4.89.08
+
+Make GAM family (GAMADV-X, GAMADV-XTD, GAMADV-XTD3) explicit in `gam version`.
+
+Handle an additional API error in `gam create resource`.
+
+4.89.07
+
+Added new forms of `gam create\use project` to allow unambiguous entry of options.
+gam create project [admin <EmailAddress>] [project <ProjectID>]
+gam use project [admin <EmailAddress>] [project <ProjectID>]
+
+Following Jay's suggestion, added options to `gam update\delete mobile` to allow qualifying
+devices by user email address. This would typically be used when a query is performed to select devices.
+Additionally, if more that one device is selected, the `doit` option must be specified.
+
+gam update mobile <MobileEntity> action <MobileAction>
+        [doit] [matchusers <UserTypeEntity>]
+gam delete mobile <MobileEntity>
+        [doit] [matchusers <UserTypeEntity>]
+
+4.89.06
+
+Add code to handle a rare API error when creating a group.
+
+4.89.05
+
+Skipped.
+
+4.89.04
+
+Executable versions of GAMADV-X are now built with PyInstaller 3.5.
+
+Clean up windows-build.bat; rename Windows installation files:
+* gamadv-x-4.wx.yz-windows-x86.msi - 32 bit Windows Installer
+* gamadv-x-4.wx.yz-windows-x86.zip - 32 bit Windows ZIP file
+* gamadv-x-4.wx.yz-windows-x86_64.msi - 64 bit Windows Installer
+* gamadv-x-4.wx.yz-windows-x86_64.msi - 64 bit Windows ZIP file
+
+4.89.03
+
+Added options to `<UserTypeEntity>` to allow a greater selection of users based on suspension status:
+* `all users` - All non-suspended Users, this is the existing option
+* `all users_ns` - All non-suspended Users, a synonym for `all users`
+* `all users_susp` - All suspended Users
+* `all users_ns_susp` - All non-suspended and suspended Users
+
+4.89.02
+
+Added options to `gam update calattendees` to allow easier specification of multiple attendees.
+* https://github.com/taers232c/GAMADV-X/wiki/Users-Calendars-Events#update-calendar-event-attendees
+
+Fixed bug that caused `gam purge evant` and `gam empty calendartrash` to fail
+with error `ERROR: Parameter "sendUpdates" value "False" is not an allowed value in "[u'all', u'externalOnly', u'none']"`.
+
+4.89.01
+
+Added the ability to select fields in `gam print/show drivefileacls`.
+
+4.89.00
+
+Fixed bug `gam print sheetrange` that caused a trap.
+
+4.88.13
+
+Update code to match changes in Vault API concerning change from Team Drive to Shared Drive.
+
+4.88.12
+
+Added options `region any|europe|us` and `showconfidentialmodecontent <Boolean>` to `gam create vaultexport|export matter`.
+The `region any|europe|us` option requires G Suite Enterprise or G Suite Business licenses.
+
+4.88.11
+
+Recoded `gam create/update course`.
+
+4.88.10
+
+Added `countsonly` option to `gam calendar <CalendarEntity> print/show events` and
+`gam <UserTypeEntity> print/show events <UserCalendarEntity>`.
+This will cause Gam to print the number of events selected but no event details.
+
+4.88.09
+
+Skipped.
+
+4.88.08
+
+Updated `gam sendemail` to allow from addresses with display names.
+gam sendemail user@domain.com from "Google Admin<admin@domain.com>" subject test message test
+
+4.88.07
+
+Following Jay's lead, simplify DNS handling in `gam update verification`.
+
+4.88.06
+
+Skipped.
+
+4.88.05
+
+Fixed bug in `gam create/update user` that caused a trap when the `notify` option was used.
+
+4.88.04
+
+Skipped.
+
+4.88.03
+
+Added option to the `copyfrom` option used with `gam create/update course` that modifies how
+coursework is copied.
+* `copytopics` - Copy course topics
+If topics are not copied, references to them will be deleted from class work that is copied.
+
+To use this option you must update your Client and Service Account authentication:
+* `gam oauth create` - Enable the scope `Classroom API - Course Topics`
+* `gam user user@domain.com check serviceaccount`
+
+Added command to print course topics.
+gam print course-topics [todrive <ToDriveAttributes>*]
+        (course|class <CourseEntity>)*|([teacher <UserItem>] [student <UserItem>] states <CourseStateList>])
+        [topicids <CourseTopicIDEntity>]
+        [formatjson] [quotechar <Character>]
+        [timefilter updatetime] [start|starttime <Date>|<Time>] [end|endtime <Date>|<Time>]
+
+To use this command you must update your Client authentication:
+* `gam oauth create` - Enable the scope `Classroom API - Course Topics`.
+
+4.88.02
+
+Added `replace <Tag> <UserReplacement>` to 'gam create\update user` to allow additional data to be
+substituted into the subject and message if `notify <EmailAddress>` is specified.
+
+Previously, the `gam import message` command instructed the API to check the message for spam;
+the `nevercheckspam` option disabled this check. Checking the message for spam seems unnecessary,
+so now the default is to disable the check; use the `checkspam` option to enable the check.
+
+Added options to the `copyfrom` option used with `gam create/update course` that modify how
+coursework is copied.
+* `markpublishedasdraft` - Mark all published coursework as draft
+* `removeduedate` - Remove due dates from coursework.
+Improved handling of coursework fields that can't be copied; in particular, forms can't be copied.
+
+4.88.01
+
+When `todrive` is used, the command used to generate the CSV file is written to the file description.
+Any arguments in the command that included spaces are now enclosed in quotes so that the description
+can be used to reexecute the command.
+
+4.88.00
+
+When deleting duplicate email addresses within a contact, if any of the deleted duplicate
+email addresses was marked `primary`, then the single saved email address will be marked `primary`.
+
+4.86.12
+
+Added commands to delete duplicate email addresses within a contact.
+If the same email address appears multiple times within a contact, all but the first will be deleted.
+By default, the email type (work|home|other|<String>) is ignored, all duplicates, regardless of type,
+will be deleted. If `matchtype` is true, only duplicate email addresses with the same type will be deleted.
+gam dedup contacts <ContactEntity>|<ContactSelection> [matchType [<Boolean>]]
+gam <UserTypeEntity> dedup contacts <ContactEntity>|<UserContactSelection> [matchType [<Boolean>]]
+
+Added command to add a draft message to a user's mailbox.
+gam <UserTypeEntity> draft message (<SMTPDateHeader> <Time>)* (<SMTPHeader> <String>)*
+        (header <String> <String>)*
+        (textmessage|message <String>)|(textfile|file <FileName> [charset <CharSet>])
+        (htmlmessage <String>)|(htmlfile <FileName> [charset <CharSet>])
+        (replace <Tag> <UserReplacement>)* (attach <FileName> [charset <CharSet>])*
+
+4.86.11
+
+Added additional network error handling.
+
+Added user oriented variant of `gam sendemail` command. In this variant, the message is
+sent from each user in <UserTypeEntity>.
+gam <UserTypeEntity> sendemail [recipient <EmailAddressEntity>] [replyto <EmailAddress>]
+        [cc <EmailAddressEntity>] [bcc <EmailAddressEntity>] [singlemessage [<Boolean>]]
+        [subject <String>] [message|body <String>|(file <FileName> [charset <CharSet>])]
+        (replace <Tag> <String>)* [html [<Boolean>]] (attach <FileName> [charset <CharSet>])*
+        [newuser <EmailAddress> firstname|givenname <String> lastname|familyname <string> password <Password>]
+
+Courtesy of Jay, added the `guessaue` option to `gam info/print cros`. This option causes Gam to look up
+the Auto Update Expiration date for ChromeOS devices. Two additional fields are output: `guessedAUEDate`
+and `guessedAUEModel`. You should compare `model` and `guessedAUEModel` to verify that the proper date has been
+determined.
+See: https://support.google.com/chrome/a/answer/6220366
+
+Added `showownedby <UserItem>` option to `gam print groups` and `gam print/show group-members` to limit
+display to those groups owned by `<UserItem>`. For example:
+gam print groups showownedby support@domain.com
+
+4.86.10
+
+Skipped.
+
+4.86.09
+
+Fixed bug in `gam report meet` that caused a trap.
+
+Display `mobile.securityPatchLevel` as a date/time.
+
+4.86.08
+
+Added code to handle `limitExceeded` error when creating aliases.
+
+Added `notregex:<RegularExpression>` to `<FieldValueFilter>` so that `csv_output_row_filter`
+can select rows where a field doesn't match `<RegularExpression>`. For example, print all users
+that do not have an organization cost center value "Tech Support".
+gam config csv_output_row_filter 'organizations.*costCenter:notregex:"Tech Support"' print users fields name,ou,organization
+
+4.86.07
+
+Handle error generated by `gam print courses/course-participants` caused by Google returning deleted courses when listing courses.
+
+Handle trap in `gam transfer drive`.
+
+4.86.06
+
+Skipped.
+
+4.86.05
+
+Skipped.
+
+4.86.04
+
+Fixed bug that caused a trap when `csv_output_row_filter` was used.
+
+4.86.03
+
+Code cleanup for `oauth2client` library calls; following Jay's suggestion, enabled OAuth 2.0 PKCE (https://www.oauth.com/oauth2-servers/pkce)
+to protect tokens during authentication.
+
+4.86.02
+
+Skipped.
+
+4.86.01
+
+Fixed bug in `gam report <ActivityApplicationName>` that caused a trap.
+
+4.86.00
+
+Following Jay's lead, reformatted output of `gam report <ActivityApplicationName>` to make it more usable.
+
+4.85.02
+
+Fixed bug in `gam report customer` where a trap was thrown if `date` was not specified.
+
+4.85.01
+
+Fixed bug where use of `csvkmd` inside of a `gam csv` command threw a spurious error: "ERROR: CSV data already saved".
+
+4.85.00
+
+Due to an earlier Google limitation, GAM had to authorize Client access in two steps. That limitation has been eliminated and now GAM can authorize
+Client access in one step. This change requires a one-time update of the client access file oauth2.txt. If you are running any Advanced GAM version before
+`4.85.00`, perform the following command:
+```
+gam oauth update
+```
+If you have multiple sections in `gam.cfg` that reference different oauth2.txt files, perform an update on each section:
+```
+gam select aaa oauth update
+gam select bbb oauth update
+...
+```
+If you do not perform `gam oauth update`, it will be executed automatically on the first command entered.
+
+4.83.14
+
+Due to a recent change to the Google Cloud console, it's no longer necessary to enable Domain-wide delegation
+for service accounts when creating a project; those steps have been removed from `gam create project`.
+
+4.83.13
+
+Skipped.
+
+4.83.12
+
+Fixed bug that caused a trap in `gam show messages` when `showattachements` was used.
+
+4.83.11
+
+Added `targetname <FileName>` to `gam download vaultexport|export` so that downloaded zip file has a predictable name.
+
+4.83.10
+
+Removed check in `gam update license` that required old and new SKUs to have the same product number.
+
+4.83.09
+
+The `gam sendemail`, `gam import message` and `gam insert message` commands all allow specifying attachments.
+You can now optionally specify the character set for text attachments: `attach <FileName> [charset <CharSet>]`.
+For example, on a PC you might say: `attach C:\Data\Attachment.txt charset latin1`.
+
+4.83.08
+
+Skipped.
+
+4.83.07
+
+Fixed code that generated unusable random passwords when `random password` option was used
+with `gam create/update user`.
+
+4.83.06
+
+Handle errors when `todrive_user` doesn't have access to Google Drive or Gmail.
+
+4.83.05
+
+Added `norecursion` option to `gam print filelist`; this is used with the `select <DriveFileEntityListTree>`
+to prevent resursion into folders; only information about the selected folder is displayed.
+
+Added `matchfield attendeesstatus [<AttendeeAttendance>] [<AttendeeStatus>] <EmailAddressEntity>` option to
+`<EventMatchProperty>`. All of the attendees in `<EmailAddressEntity>` must be present and must have the specified values.
+    * `<AttendeeAttendance>` - Default is `required`
+    * `<AttendanceStatus>` - Default is `needsaction`
+
+4.83.04
+
+Improve handling of Authentication Token Errors.
+
+4.83.03
+
+Skipped.
+
+4.83.02
+
+Fixed bug in `gam print courses` that caused Aliases column to be included twice.
+
+4.83.01
+
+Added address fields to `<BuildingAttribute>`.
+<BuildingAttribute> ::=
+        (address|addresslines <String>)|
+        (city|locality <String>)|
+        (country|regioncode <String>)|
+        (description <String>)|
+        (floors <FloorNameList>)|
+        (id <String>)|
+        (language|languageCode <Language>)|
+        (latitude <Float>)|
+        (longitude <Float>)|
+        (name <String>)
+        (state|administrativearea <String>)|
+        (sublocality <String>)|
+        (zipcode|postalcode <String>)
+
+4.83.00
+
+Added `query <String>` option to `gam print/show resources`.
+
+Fixed bug in `redirect stderr` that would cause a trap in Windows.
+
+Fixed bug in `redirect stdout` when used with `redirect csv` that caused messages
+about `todrive` results to be deleted.
+
+Fixed bug where `matchfield attendees` or `matchfield attendeespattern` was used to select
+events and a trap was thrown when an attendee had no email address.
+
+4.82.12
+
+Modified the behavior of the `from` and `to` options in `gam create filter`. Previously,
+if you entered `gam user user@domain.com create filter from foo.com ...`, Gam would
+treat `foo.com` as an email address and, as there is no `@`, it would add `domain.com`
+from `gam.cfg` yielding `foo.com@domain.com`. This prevents you from creating correct filters.
+Now, Gam just passes whatever comes after `from` and `to` directly to the API unchanged.
+
+4.82.11
+
+`<UniqueID>` has been added to `<UserCalendarAddEntity>` and `<UserCalendarEntity>` to allow
+specification of user calendars by their user, group or resource ID.
+
+4.82.10
+
+Fixed bug in `gam update calattendees` where an attendee's optional status was not properly set.
+
+4.82.09
+
+Code cleanup.
+
+Fixed bugs in encoding and processing csv_output_row_filter.
+
+4.82.08
+
+Handle `conflict - Conflicting requests.` error when adding/removing members to/from a group.
+
+Added option `checkrc` to `gam version`; this will print the current and latest versions of Gam and:
+* set the return code to 0 if the current version is the latest version
+* set the retrun code to 1 if the current version is not the latest
+
+Added additional option to `<CrOSTypeEntity>` that allows reading a CSV file to obtain
+items that will generate deviceIds or device serial numbers.
+csvdatafile cros|cros_sn|cros_ous|cros_ous_and_children
+        ((<FileName>(:<FieldName>)+)|(gsheet(:<FieldName>)+ <UserGoogleSheet>)
+                [charset <Charset>] [columndelimiter <Character>] [quotechar <Character>])
+        [fields <FieldNameList>]
+        (matchfield|skipfield <FieldName> <RegularExpression>)*
+        [delimiter <Character>]
+
+Added additional option to `<UserTypeEntity>` that allows reading a CSV file to obtain
+items that will generate user email addresses.
+csvdatafile users|groups|groups_ns|groups_susp|ous|ous_ns|ous_susp|
+        ous_and_children|ous_and_children_ns|ous_and_children_susp|
+        courseparticipants|students|teachers
+        ((<FileName>(:<FieldName>)+)|(gsheet(:<FieldName>)+ <UserGoogleSheet>)
+                [charset <Charset>] [columndelimiter <Character>] [quotechar <Character>])
+        [fields <FieldNameList>]
+        (matchfield|skipfield <FieldName> <RegularExpression>)*
+        [delimiter <Character>]
+
+4.82.07
+
+Fixed bug in `gam create/use/update/delete/show/print projects` when `<EmailAddress>` was not specified.
+
+4.82.03/06
+
+Skipped.
+
+4.82.02
+
+Mobile devices may have embedded newlines, encode them to avoid problems on output.
+
+4.82.01
+
+Enhanced `gam <UserTypeEntity> update calattendees` to provide more options.
+* https://github.com/taers232c/GAMADV-X/wiki/Users-Calendars-Events#update-calendar-event-attendees
+
 4.82.00
 
 Added `domains|domains_ns|domains_susp <DomainNameListList>` to `<UserTypeEntity>`. For users with multiple

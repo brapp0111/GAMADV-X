@@ -97,6 +97,7 @@ PC_LANGUAGES = 'lang'
 PC_LOCATIONS = 'loca'
 PC_NAME = 'name'
 PC_NOTES = 'note'
+PC_ORGANIZATIONS = 'orga'
 PC_POSIX = 'posi'
 PC_SCHEMAS = 'schm'
 PC_SSH = 'ssh '
@@ -137,13 +138,17 @@ PROPERTIES = {
   'ipWhitelisted':
     {CLASS: PC_BOOLEAN, TITLE: 'IP Whitelisted',},
   'archived':
-    {CLASS: PC_BOOLEAN, TITLE: 'Account Archived',},
+    {CLASS: PC_BOOLEAN, TITLE: 'Is Archived',},
   'suspended':
     {CLASS: PC_BOOLEAN, TITLE: 'Account Suspended',},
   'suspensionReason':
     {CLASS: PC_STRING, TITLE: 'Suspension Reason',},
   'changePasswordAtNextLogin':
     {CLASS: PC_BOOLEAN, TITLE: 'Must Change Password',},
+  'recoveryEmail':
+    {CLASS: PC_STRING, TITLE: 'Recovery Email',},
+  'recoveryPhone':
+    {CLASS: PC_STRING, TITLE: 'Recovery Phone',},
   'id':
     {CLASS: PC_STRING, TITLE: 'Google Unique ID',},
   'customerId':
@@ -211,7 +216,7 @@ PROPERTIES = {
         PTKW_ATTR_TYPE_KEYWORD: 'contentType', PTKW_ATTR_TYPE_CUSTOM_VALUE: None, PTKW_ATTR_CUSTOMTYPE_KEYWORD: None,
         PTKW_KEYWORD_LIST: ['text_plain', 'text_html'],},},
   'organizations':
-    {CLASS: PC_ARRAY, TITLE: 'Organizations',
+    {CLASS: PC_ORGANIZATIONS, TITLE: 'Organizations',
      TYPE_KEYWORDS:
        {PTKW_CL_TYPE_KEYWORD: 'type', PTKW_CL_CUSTOM_KEYWORD: 'custom', PTKW_CL_CUSTOMTYPE_KEYWORD: 'customtype',
         PTKW_ATTR_TYPE_KEYWORD: 'type', PTKW_ATTR_TYPE_CUSTOM_VALUE: None, PTKW_ATTR_CUSTOMTYPE_KEYWORD: 'customType',

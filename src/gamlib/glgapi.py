@@ -46,6 +46,7 @@ CANNOT_SHARE_GROUPS_WITHLINK = 'cannotShareGroupsWithLink'
 CANNOT_SHARE_USERS_WITHLINK = 'cannotShareUsersWithLink'
 CANNOT_SHARE_TEAMDRIVE_TOPFOLDER_WITH_ANYONEORDOMAINS = 'cannotShareTeamDriveTopFolderWithAnyoneOrDomains'
 CONDITION_NOT_MET = 'conditionNotMet'
+CONFLICT = 'conflict'
 CUSTOMER_NOT_FOUND = 'customerNotFound'
 CYCLIC_MEMBERSHIPS_NOT_ALLOWED = 'cyclicMembershipsNotAllowed'
 DAILY_LIMIT_EXCEEDED = 'dailyLimitExceeded'
@@ -90,6 +91,7 @@ INVALID_RESOURCE = 'invalidResource'
 INVALID_SCHEMA_VALUE = 'invalidSchemaValue'
 INVALID_SCOPE_VALUE = 'invalidScopeValue'
 INVALID_SHARING_REQUEST = 'invalidSharingRequest'
+LIMIT_EXCEEDED = 'limitExceeded'
 LOGIN_REQUIRED = 'loginRequired'
 MEMBER_NOT_FOUND = 'memberNotFound'
 NO_LIST_TEAMDRIVES_ADMINISTRATOR_PRIVILEGE = 'noListTeamDrivesAdministratorPrivilege'
@@ -119,11 +121,11 @@ REVISION_NOT_FOUND = 'revisionNotFound'
 REVISIONS_NOT_SUPPORTED = 'revisionsNotSupported'
 SERVICE_LIMIT = 'serviceLimit'
 SERVICE_NOT_AVAILABLE = 'serviceNotAvailable'
+SHARING_RATE_LIMIT_EXCEEDED = 'sharingRateLimitExceeded'
 SYSTEM_ERROR = 'systemError'
 TEAMDRIVE_ALREADY_EXISTS = 'teamDriveAlreadyExists'
 TEAMDRIVE_DOMAIN_USERS_ONLY_RESTRICTION = 'teamDriveDomainUsersOnlyRestriction'
 TEAMDRIVE_MEMBERSHIP_REQUIRED = 'teamDriveMembershipRequired'
-TEAMDRIVE_NOT_FOUND = 'teamDriveNotFound'
 TEAMDRIVES_FOLDER_MOVE_IN_NOT_SUPPORTED = 'teamDrivesFolderMoveInNotSupported'
 TEAMDRIVES_FOLDER_SHARING_NOT_SUPPORTED = 'teamDrivesFolderSharingNotSupported'
 TEAMDRIVES_PARENT_LIMIT = 'teamDrivesParentLimit'
@@ -151,8 +153,8 @@ DRIVE2_UPDATE_ACL_THROW_REASONS = [BAD_REQUEST, INVALID_OWNERSHIP_TRANSFER,
                                    PERMISSION_NOT_FOUND]
 DRIVE2_DELETE_ACL_THROW_REASONS = [PERMISSION_NOT_FOUND, BAD_REQUEST]
 DRIVE3_CREATE_ACL_THROW_REASONS = [INVALID, INVALID_SHARING_REQUEST, OWNERSHIP_CHANGE_ACROSS_DOMAIN_NOT_PERMITTED,
-                                   TEAMDRIVE_NOT_FOUND, TEAMDRIVE_DOMAIN_USERS_ONLY_RESTRICTION,
-                                   INSUFFICIENT_ADMINISTRATOR_PRIVILEGES,
+                                   NOT_FOUND, TEAMDRIVE_DOMAIN_USERS_ONLY_RESTRICTION,
+                                   INSUFFICIENT_ADMINISTRATOR_PRIVILEGES, SHARING_RATE_LIMIT_EXCEEDED,
                                    CANNOT_SHARE_TEAMDRIVE_TOPFOLDER_WITH_ANYONEORDOMAINS,
                                    OWNER_ON_TEAMDRIVE_ITEM_NOT_SUPPORTED,
                                    ORGANIZER_ON_NON_TEAMDRIVE_ITEM_NOT_SUPPORTED,
@@ -161,8 +163,8 @@ DRIVE3_CREATE_ACL_THROW_REASONS = [INVALID, INVALID_SHARING_REQUEST, OWNERSHIP_C
                                    TEAMDRIVES_FOLDER_SHARING_NOT_SUPPORTED]
 DRIVE3_UPDATE_ACL_THROW_REASONS = [BAD_REQUEST, INVALID_OWNERSHIP_TRANSFER, CANNOT_REMOVE_OWNER,
                                    OWNERSHIP_CHANGE_ACROSS_DOMAIN_NOT_PERMITTED,
-                                   TEAMDRIVE_NOT_FOUND, TEAMDRIVE_DOMAIN_USERS_ONLY_RESTRICTION,
-                                   INSUFFICIENT_ADMINISTRATOR_PRIVILEGES,
+                                   NOT_FOUND, TEAMDRIVE_DOMAIN_USERS_ONLY_RESTRICTION,
+                                   INSUFFICIENT_ADMINISTRATOR_PRIVILEGES, SHARING_RATE_LIMIT_EXCEEDED,
                                    CANNOT_SHARE_TEAMDRIVE_TOPFOLDER_WITH_ANYONEORDOMAINS,
                                    OWNER_ON_TEAMDRIVE_ITEM_NOT_SUPPORTED,
                                    ORGANIZER_ON_NON_TEAMDRIVE_ITEM_NOT_SUPPORTED,
@@ -172,8 +174,8 @@ DRIVE3_UPDATE_ACL_THROW_REASONS = [BAD_REQUEST, INVALID_OWNERSHIP_TRANSFER, CANN
                                    FIELD_NOT_WRITABLE, PERMISSION_NOT_FOUND]
 DRIVE3_DELETE_ACL_THROW_REASONS = [BAD_REQUEST, CANNOT_REMOVE_OWNER,
                                    CANNOT_MODIFY_INHERITED_TEAMDRIVE_PERMISSION,
-                                   INSUFFICIENT_ADMINISTRATOR_PRIVILEGES,
-                                   TEAMDRIVE_NOT_FOUND, PERMISSION_NOT_FOUND]
+                                   INSUFFICIENT_ADMINISTRATOR_PRIVILEGES, SHARING_RATE_LIMIT_EXCEEDED,
+                                   NOT_FOUND, PERMISSION_NOT_FOUND]
 GMAIL_THROW_REASONS = [SERVICE_NOT_AVAILABLE, BAD_REQUEST]
 GMAIL_SMIME_THROW_REASONS = [SERVICE_NOT_AVAILABLE, BAD_REQUEST, INVALID_ARGUMENT, FORBIDDEN]
 GROUP_GET_RETRY_REASONS = [INVALID, SYSTEM_ERROR]
@@ -242,7 +244,7 @@ REASON_MESSAGE_MAP = {
     ('Permission not found', PERMISSION_NOT_FOUND),
     ('Resource Not Found', RESOURCE_NOT_FOUND),
     ('Revision not found', REVISION_NOT_FOUND),
-    ('Team Drive not found', TEAMDRIVE_NOT_FOUND),
+    ('Shared Drive not found', NOT_FOUND),
     ('Not Found', NOT_FOUND),
     ],
   REQUIRED: [
@@ -303,6 +305,8 @@ class cannotShareUsersWithLink(Exception):
 class cannotShareTeamDriveTopFolderWithAnyoneOrDomains(Exception):
   pass
 class conditionNotMet(Exception):
+  pass
+class conflict(Exception):
   pass
 class customerNotFound(Exception):
   pass
@@ -388,6 +392,8 @@ class invalidScopeValue(Exception):
   pass
 class invalidSharingRequest(Exception):
   pass
+class limitExceeded(Exception):
+  pass
 class loginRequired(Exception):
   pass
 class memberNotFound(Exception):
@@ -444,6 +450,8 @@ class serviceLimit(Exception):
   pass
 class serviceNotAvailable(Exception):
   pass
+class sharingRateLimitExceeded(Exception):
+  pass
 class systemError(Exception):
   pass
 class teamDriveAlreadyExists(Exception):
@@ -451,8 +459,6 @@ class teamDriveAlreadyExists(Exception):
 class teamDriveDomainUsersOnlyRestriction(Exception):
   pass
 class teamDriveMembershipRequired(Exception):
-  pass
-class teamDriveNotFound(Exception):
   pass
 class teamDrivesFolderMoveInNotSupported(Exception):
   pass
@@ -501,6 +507,7 @@ REASON_EXCEPTION_MAP = {
   CANNOT_SHARE_USERS_WITHLINK: cannotShareUsersWithLink,
   CANNOT_SHARE_TEAMDRIVE_TOPFOLDER_WITH_ANYONEORDOMAINS: cannotShareTeamDriveTopFolderWithAnyoneOrDomains,
   CONDITION_NOT_MET: conditionNotMet,
+  CONFLICT: conflict,
   CUSTOMER_NOT_FOUND: customerNotFound,
   CYCLIC_MEMBERSHIPS_NOT_ALLOWED: cyclicMembershipsNotAllowed,
   DELETED: deleted,
@@ -543,6 +550,7 @@ REASON_EXCEPTION_MAP = {
   INVALID_SCHEMA_VALUE: invalidSchemaValue,
   INVALID_SCOPE_VALUE: invalidScopeValue,
   INVALID_SHARING_REQUEST: invalidSharingRequest,
+  LIMIT_EXCEEDED: limitExceeded,
   LOGIN_REQUIRED: loginRequired,
   MEMBER_NOT_FOUND: memberNotFound,
   NO_LIST_TEAMDRIVES_ADMINISTRATOR_PRIVILEGE: noListTeamDrivesAdministratorPrivilege,
@@ -571,11 +579,11 @@ REASON_EXCEPTION_MAP = {
   REVISIONS_NOT_SUPPORTED: revisionsNotSupported,
   SERVICE_LIMIT: serviceLimit,
   SERVICE_NOT_AVAILABLE: serviceNotAvailable,
+  SHARING_RATE_LIMIT_EXCEEDED: sharingRateLimitExceeded,
   SYSTEM_ERROR: systemError,
   TEAMDRIVE_ALREADY_EXISTS: teamDriveAlreadyExists,
   TEAMDRIVE_DOMAIN_USERS_ONLY_RESTRICTION: teamDriveDomainUsersOnlyRestriction,
   TEAMDRIVE_MEMBERSHIP_REQUIRED: teamDriveMembershipRequired,
-  TEAMDRIVE_NOT_FOUND: teamDriveNotFound,
   TEAMDRIVES_FOLDER_MOVE_IN_NOT_SUPPORTED: teamDrivesFolderMoveInNotSupported,
   TEAMDRIVES_FOLDER_SHARING_NOT_SUPPORTED: teamDrivesFolderSharingNotSupported,
   TEAMDRIVES_PARENT_LIMIT: teamDrivesParentLimit,

@@ -38,17 +38,20 @@ class GamAction(object):
   COLLECT = 'collect'
   COPY = 'copy'
   CREATE = 'crea'
+  DEDUP = 'dedu'
   DELETE = 'dele'
   DELETE_EMPTY = 'delm'
   DEPROVISION = 'depr'
   DISABLE = 'disa'
   DOWNLOAD = 'down'
+  DRAFT = 'draf'
   EMPTY = 'empt'
   ENABLE = 'enbl'
   EXPORT = 'expo'
   EXTRACT = 'extr'
   FETCH = 'fetc'
   FORWARD = 'forw'
+  HIDE = 'hide'
   IMPORT = 'impo'
   INFO = 'info'
   INITIALIZE = 'init'
@@ -63,6 +66,7 @@ class GamAction(object):
   PROCESS = 'proc'
   PURGE = 'purg'
   REENABLE = 'reen'
+  REFRESH = 'refr'
   REGISTER = 'regi'
   RELABEL = 'rela'
   REMOVE = 'remo'
@@ -79,6 +83,7 @@ class GamAction(object):
   SENDEMAIL = 'send'
   SET = 'set '
   SHOW = 'show'
+  SKIP = u'skip'
   SPAM = 'spam'
   SUBMIT = 'subm'
   SUSPEND = 'susp'
@@ -87,7 +92,8 @@ class GamAction(object):
   TRANSFER_OWNERSHIP = 'trow'
   TRASH = 'tras'
   UNDELETE = 'unde'
-  UNSUSPEND = 'uns'
+  UNHIDE = 'unhi'
+  UNSUSPEND = 'unsu'
   UNTRASH = 'untr'
   UPDATE = 'upda'
   UPDATE_PREVIEW = 'updp'
@@ -117,16 +123,19 @@ class GamAction(object):
     COLLECT: ['Collected', 'Collect'],
     COPY: ['Copied', 'Copy'],
     CREATE: ['Created', 'Create'],
+    DEDUP: ['Duplicates Deleted', 'Delete Duplicates'],
     DELETE: ['Deleted', 'Delete'],
     DELETE_EMPTY: ['Deleted', 'Delete Empty'],
     DEPROVISION: ['Deprovisioned', 'Deprovision'],
     DISABLE: ['Disabled', 'Disable'],
     DOWNLOAD: ['Downloaded', 'Download'],
+    DRAFT: ['Drafted', 'Draft'],
     EMPTY: ['Emptied', 'Empty'],
     ENABLE: ['Enabled', 'Enable'],
     EXPORT: ['Exported', 'Export'],
     EXTRACT: ['Extracted', 'Extract'],
     FORWARD: ['Forwarded', 'Forward'],
+    HIDE: ['Hidden', 'Hide'],
     IMPORT: ['Imported', 'Import'],
     INFO: ['Shown', 'Show Info'],
     INITIALIZE: ['Initialized', 'Initialize'],
@@ -141,6 +150,7 @@ class GamAction(object):
     PROCESS: ['Processed', 'Process'],
     PURGE: ['Purged', 'Purge'],
     REENABLE: ['Reenabled', 'Reenable'],
+    REFRESH: ['Refreshed', 'Refresh'],
     REGISTER: ['Registered', 'Register'],
     RELABEL: ['Relabeled', 'Relabel'],
     REMOVE: ['Removed', 'Remove'],
@@ -157,6 +167,7 @@ class GamAction(object):
     SENDEMAIL: ['Email Sent', 'Send Email'],
     SET: ['Set', 'Set'],
     SHOW: ['Shown', 'Show'],
+    SKIP: ['Skipped', 'Skip'],
     SPAM: ['Marked as Spam', 'Mark as Spam'],
     SUBMIT: ['Submitted', 'Submit'],
     SUSPEND: ['Suspended', 'Suspend'],
@@ -165,6 +176,7 @@ class GamAction(object):
     TRANSFER_OWNERSHIP: ['Ownership Transferred', 'Transfer Ownership'],
     TRASH: ['Trashed', 'Trash'],
     UNDELETE: ['Undeleted', 'Undelete'],
+    UNHIDE: ['Unhidden', 'Unhide'],
     UNSUSPEND: ['Unsuspended', 'Unsuspend'],
     UNTRASH: ['Untrashed', 'Untrash'],
     UNZIP: ['Unzipped', 'Unzip'],

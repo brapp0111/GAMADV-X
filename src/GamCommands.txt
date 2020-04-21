@@ -24,24 +24,31 @@ If an item contains spaces, it should be surrounded by ".
 
 <Charset> ::= ascii|latin1|mbcs|utf-8|utf-8-sig|utf-16|<String>
 <ColorNameGoogle> ::=
-        asparagus|bluevelvet|bubblegum|cardinal|chocolateicecream|denim|desertsand|earthworm|
-        macaroni|marsorange|mountaingray|mountaingrey|mouse|oldbrickred|pool|purpledino|purplerain|
-        rainysky|seafoam|slimegreen|spearmint|toyeggplant|vernfern|wildstrawberries|yellowcab
+        asparagus|bluevelvet|bubblegum|cardinal|chocolateicecream|denim|desertsand|
+        earthworm| macaroni|marsorange|mountaingray|mountaingrey|mouse|oldbrickred|
+        pool|purpledino|purplerain| rainysky|seafoam|slimegreen|spearmint|
+        toyeggplant|vernfern|wildstrawberries|yellowcab
 <ColorNameWeb> ::=
-        aliceblue|antiquewhite|aqua|aquamarine|azure|beige|bisque|black|blanchedalmond|blue|blueviolet|brown|burlywood|
-        cadetblue|chartreuse|chocolate|coral|cornflowerblue|cornsilk|crimson|cyan|
-        darkblue|darkcyan|darkgoldenrod|darkgray|darkgrey|darkgreen|darkkhaki|darkmagenta|darkolivegreen|darkorange|darkorchid|darkred|
-        darksalmon|darkseagreen|darkslateblue|darkslategray|darkslategrey|darkturquoise|darkviolet|deeppink|deepskyblue|dimgray|dimgrey|dodgerblue|
-        firebrick|floralwhite|forestgreen|fuchsia|gainsboro|ghostwhite|gold|goldenrod|gray|grey|green|greenyellow|
-        honeydew|hotpink|indianred|indigo|ivory|khaki|
-        lavender|lavenderblush|lawngreen|lemonchiffon|lightblue|lightcoral|lightcyan|lightgoldenrodyellow|lightgray|lightgrey|lightgreen|lightpink|
-        lightsalmon|lightseagreen|lightskyblue|lightslategray|lightslategrey|lightsteelblue|lightyellow|lime|limegreen|linen|
-        magenta|maroon|mediumaquamarine|mediumblue|mediumorchid|mediumpurple|mediumseagreen|mediumslateblue|
-        mediumspringgreen|mediumturquoise|mediumvioletred|midnightblue|mintcream|mistyrose|moccasin|navajowhite|navy|
-        oldlace|olive|olivedrab|orange|orangered|orchid|palegoldenrod|palegreen|paleturquoise|palevioletred|
-        papayawhip|peachpuff|peru|pink|plum|powderblue|purple|red|rosybrown|royalblue|
-        saddlebrown|salmon|sandybrown|seagreen|seashell|sienna|silver|skyblue|slateblue|slategray|slategrey|snow|springgreen|steelblue|
-        tan|teal|thistle|tomato|turquoise|violet|wheat|white|whitesmoke|yellow|yellowgreen
+        aliceblue|antiquewhite|aqua|aquamarine|azure|beige|bisque|black|blanchedalmond|
+        blue|blueviolet|brown|burlywood| cadetblue|chartreuse|chocolate|coral|
+        cornflowerblue|cornsilk|crimson|cyan| darkblue|darkcyan|darkgoldenrod|darkgray|
+        darkgrey|darkgreen|darkkhaki|darkmagenta|darkolivegreen|darkorange|darkorchid|
+        darkred| darksalmon|darkseagreen|darkslateblue|darkslategray|darkslategrey|
+        darkturquoise|darkviolet|deeppink|deepskyblue|dimgray|dimgrey|dodgerblue|
+        firebrick|floralwhite|forestgreen|fuchsia|gainsboro|ghostwhite|gold|goldenrod|
+        gray|grey|green|greenyellow| honeydew|hotpink|indianred|indigo|ivory|khaki|
+        lavender|lavenderblush|lawngreen|lemonchiffon|lightblue|lightcoral|lightcyan|
+        lightgoldenrodyellow|lightgray|lightgrey|lightgreen|lightpink|lightsalmon|
+        lightseagreen|lightskyblue|lightslategray|lightslategrey|lightsteelblue|
+        lightyellow|lime|limegreen|linen| magenta|maroon|mediumaquamarine|mediumblue|
+        mediumorchid|mediumpurple|mediumseagreen|mediumslateblue| mediumspringgreen|
+        mediumturquoise|mediumvioletred|midnightblue|mintcream|mistyrose|moccasin|
+        navajowhite|navy| oldlace|olive|olivedrab|orange|orangered|orchid|
+        palegoldenrod|palegreen|paleturquoise|palevioletred| papayawhip|peachpuff|
+        peru|pink|plum|powderblue|purple|red|rosybrown|royalblue| saddlebrown|salmon|
+        sandybrown|seagreen|seashell|sienna|silver|skyblue|slateblue|slategray|
+        slategrey|snow|springgreen|steelblue| tan|teal|thistle|tomato|turquoise|violet|
+        wheat|white|whitesmoke|yellow|yellowgreen
 <ColorName> ::= <ColorNameGoogle>|<ColorNameWeb>
 <FileFormat> ::=
         csv|doc|dot|docx|dotx|epub|html|jpeg|jpg|mht|odp|ods|odt|
@@ -57,23 +64,27 @@ If an item contains spaces, it should be surrounded by ".
         #f3f3f3|#f691b3|#f6c5be|#f7a7c0|#fad165|#fb4c2f|#fbc8d9|#fcda83|
         #fcdee8|#fce8b3|#fef1d1|#ffad47|#ffbc6b|#ffd6a2|#ffe6c7|#ffffff
 <Language> ::=
-        ach|af|ag|ak|am|ar|az|be|bem|bg|bn|br|bs|ca|chr|ckb|co|crs|cs|cy|da|de|ee|el|en|en-gb|en-us|eo|es|es-419|et|eu|
-        fa|fi|fo|fr|fr-ca|fy|ga|gaa|gd|gl|gn|gu|ha|haw|he|hi|hr|ht|hu|hy|ia|id|ig|in|is|it|iw|ja|jw|
-        ka|kg|kk|km|kn|ko|kri|ku|ky|la|lg|ln|lo|loz|lt|lua|lv|mfe|mg|mi|mk|ml|mn|mo|mr|ms|mt|my|
-        ne|nl|nn|no|nso|ny|nyn|oc|om|or|pa|pcm|pl|ps|pt-br|pt-pt|qu|rm|rn|ro|ru|rw|
-        sd|sh|si|sk|sl|sn|so|sq|sr|sr-me|st|su|sv|sw|ta|te|tg|th|ti|tk|tl|tn|to|tr|tt|tum|tw|
+        ach|af|ag|ak|am|ar|az|be|bem|bg|bn|br|bs|ca|chr|ckb|co|crs|cs|cy|da|de|
+        ee|el|en|en-gb|en-us|eo|es|es-419|et|eu|fa|fi|fo|fr|fr-ca|fy|
+        ga|gaa|gd|gl|gn|gu|ha|haw|he|hi|hr|ht|hu|hy|ia|id|ig|in|is|it|iw|ja|jw|
+        ka|kg|kk|km|kn|ko|kri|ku|ky|la|lg|ln|lo|loz|lt|lua|lv|
+        mfe|mg|mi|mk|ml|mn|mo|mr|ms|mt|my|ne|nl|nn|no|nso|ny|nyn|oc|om|or|
+        pa|pcm|pl|ps|pt-br|pt-pt|qu|rm|rn|ro|ru|rw|
+        sd|sh|si|sk|sl|sn|so|sq|sr|sr-me|st|su|sv|sw|
+        ta|te|tg|th|ti|tk|tl|tn|to|tr|tt|tum|tw|
         ug|uk|ur|uz|vi|wo|xh|yi|yo|zh-cn|zh-hk|zh-tw|zu
 <MimeTypeShortcut> ::=
         gdoc|gdocument|
         gdrawing|
+        gfile|
         gfolder|gdirectory|
         gform|
         gfusion|
         gmap|
         gpresentation|
         gscript|
-        gsite|
-        gsheet|gspreadsheet
+        gsheet|gspreadsheet|
+        gsite
 <MimeTypeName> ::= application|audio|font|image|message|model|multipart|text|video
 <MimeType> ::= <MimeTypeShortcut>|(<MimeTypeName>/<String>)
 <ProductID> ::=
@@ -82,7 +93,7 @@ If an item contains spaces, it should be surrounded by ".
         Google-Coordinate|
         Google-Drive-storage|
         Google-Vault|
-        101001|101005|101031
+        101001|101005|101006|101031|101033|101034
 <SKUID> ::=
         cloudidentity|identity|1010010001|
         cloudidentitypremium|identitypremium|1010050001|
@@ -90,14 +101,19 @@ If an item contains spaces, it should be surrounded by ".
         gafb|gafw|basic|gsuitebasic|Google-Apps-For-Business|
         gafg|gsuitegovernment|gsuitegov|Google-Apps-For-Government|
         gams|postini|gsuitegams|gsuitepostini|gsuitemessagesecurity|Google-Apps-For-Postini|
-        gal|lite|gsuitelite|Google-Apps-Lite|
-        gau|unlimited|gsuitebusiness|Google-Apps-Unlimited|
-        gae|enterprise|gsuiteenterprise|1010020020|
+        gal|gsl|lite|gsuitelite|Google-Apps-Lite|
+        gau|gsb|unlimited|gsuitebusiness|Google-Apps-Unlimited|
+        gae|gse|enterprise|gsuiteenterprise|1010020020|
         gsefe|e4e|gsuiteenterpriseeducation|1010310002|
         gsefes|e4es|gsuiteenterpriseeducationstudent|1010310003|
+        gsbau|businessarchived|gsuitebusinessarchived|1010340002|
+        gseau|enterprisearchived|gsuiteenterprisearchived|1010340001|
+        gvstarter|voicestarter|googlevoicestarter|1010330003|
+        gvstandard|voicestandard|googlevoicestandard|1010330004|
+        gvpremier|voicepremier|googlevoicepremier|1010330002|
         chrome|cdm|googlechromedevicemanagement|Google-Chrome-Device-Management|
         coordinate|googlecoordinate|Google-Coordinate|
-        d4e|driveenterprise|drive4enterprise|
+        d4e|driveenterprise|drive4enterprise|1010060001|
         drive20gb|20gb|googledrivestorage20gb|Google-Drive-storage-20GB|
         drive50gb|50gb|googledrivestorage50gb|Google-Drive-storage-50GB|
         drive200gb|200gb|googledrivestorage200gb|Google-Drive-storage-200GB|
@@ -138,18 +154,22 @@ If an item contains spaces, it should be surrounded by ".
         (+|-)<Number>(m|h|d|w|y) |
         never|
         now|today
-<RegularExpression> ::= <Python Regular Expression, see: https://docs.python.org/2/library/re.html>
-<ProjectID> ::= <String> # Must match this Python Regular Expression: [a-z][a-z0-9-]{4,28}[a-z0-9]
+<RegularExpression> ::= <String>
+        See: https://docs.python.org/2.7/library/re.html
+<ProjectID> ::= <String>
+        Must match this Python Regular Expression: [a-z][a-z0-9-]{4,28}[a-z0-9]
 <SiteName> ::= [a-z,0-9,-]+
 <UniqueID> ::= uid:<String>
 
 ## Named items
 
 <AccessToken> ::= <String>
-<ASPID> ::= <String>
 <AlertID> ::= <String>
-<CalendarACLScope> ::= <EmailAddress>|user:<EmailAddress>|group:<EmailAddress>|domain:<DomainName>)|domain|default
+<ASPID> ::= <String>
 <BuildingID> ::= <String>|id:<String>
+<CalendarACLScope> ::=
+        <EmailAddress>|user:<EmailAddress>|group:<EmailAddress>|
+        domain:<DomainName>)|domain|default
 <CalendarColorIndex> ::= <Number in range 1-24>
 <CalendarItem> ::= <EmailAddress>|<String>
 <ChatRoom> ::= <String>
@@ -165,16 +185,22 @@ If an item contains spaces, it should be surrounded by ".
 <CourseAnnouncementState> ::= draft|published|deleted
 <CourseID> ::= <Number>|d:<CourseAlias>
 <CourseParticipantType> ::= teacher|teachers|student|students
-<CourseState> ::= active|archived|provisioned|declined
+<CourseState> ::= active|archived|provisioned|declined|suspended
 <CourseSubmissionID> ::= <Number>
 <CourseSubmissionState> ::= new|created|turned_in|returned|reclaimed_by_student
+<CourseTopicID> ::= <Number>
 <CourseWorkID> ::= <Number>
 <CourseWorkState> ::= draft|published|deleted
 <CrOSID> ::= <String>
 <CustomerID> ::= <String>
 <DomainAlias> ::= <String>
 <DomainName> ::= <String>(.<String>)+
-<DriveFileACLRole> ::= commenter|editor|owner|reader|writer
+<DriveFileACLRole> ::=
+        commenter|
+        editor|
+        owner|
+        reader|
+        writer
 <DriveFileID> ::= <String>
 <DriveFileURL> ::=
         https://docs.google.com/a/<DomainName>/document/d/<DriveFileID>/<String>
@@ -185,7 +211,9 @@ If an item contains spaces, it should be surrounded by ".
 <DriveFileName> ::= <String>
 <DriveFolderID> ::= <String>
 <DriveFolderName> ::= <String>
-<DriveFilePermission> ::= anyone|anyonewithlink|user:<EmailAddress>|group:<EmailAddress>|domain:<DomainName>|domainwithlink:<DomainName>;<DriveFileACLRole>
+<DriveFilePermission> ::=
+        anyone|anyonewithlink|user:<EmailAddress>|group:<EmailAddress>|
+        domain:<DomainName>|domainwithlink:<DomainName>;<DriveFileACLRole>
 <DriveFilePermissionID> ::= anyone|anyonewithlink|id:<String>
 <DriveFilePermissionIDorEmail> ::= <DriveFilePermissionID>|<EmailAddress>
 <DriveFileRevisionID> ::= <String>
@@ -195,6 +223,7 @@ If an item contains spaces, it should be surrounded by ".
 <EventColorIndex> ::= <Number in range 1-11>
 <EventID> ::= <String>
 <EventName> ::= <String>
+<ExportItem> ::= <UniqueID>|<String>
 <FeatureName> ::= <String>
 <FieldName> ::= <String>
 <FileName> ::= <String>
@@ -226,32 +255,47 @@ If an item contains spaces, it should be surrounded by ".
 <ParameterKey> ::= <String>
 <ParameterValue> ::= <String>
 <Password> ::= <String>
-<PrinterACLScope> ::= <UserTypeEntity>|user:<EmailAdress>|group:<EmailAddress>|domain:<DomainName>)|domain|public
+<PrinterACLScope> ::=
+        <UserTypeEntity>|user:<EmailAdress>|group:<EmailAddress>|
+        domain:<DomainName>)|domain|public
 <PrinterID> ::= <String>
 <PrintJobAge> ::= <Number>(m|h|d|w)
 <PrintJobID> ::= <String>
 <PrintJobStatus> ::= done|error|held|in_progress|queued|submitted
 <PropertyKey> ::= <String>
 <PropertyValue> ::= <String>
-<QueryAlert> ::= <String> See: https://developers.google.com/admin-sdk/alertcenter/guides/query-filters
+<QueryAlert> ::= <String>
+        See: https://developers.google.com/admin-sdk/alertcenter/guides/query-filters
 <QueryCalendar> ::= <String>
-<QueryContact> ::= <String> See: https://developers.google.com/google-apps/contacts/v3/reference#contacts-query-parameters-reference
-<QueryCrOS> ::= <String> See: https://support.google.com/chrome/a/answer/1698333?hl=en
-<QueryDriveFile> ::= <String> See: https://developers.google.com/drive/api/v2/search-files
-<QueryGmail> ::= <String> See: https://support.google.com/mail/answer/7190
-<QueryGroup> ::= <String> See: https://developers.google.com/admin-sdk/directory/v1/guides/search-groups
-<QueryMobile> ::= <String> See: https://support.google.com/a/answer/7549103
-<QueryPrinter> ::= <String> See: https://developers.google.com/cloud-print/docs/appInterfaces#search
-<QueryPrintJob> ::= <String> See: https://developers.google.com/cloud-print/docs/appInterfaces#parameters_3
-<QueryUser> ::= <String> See: https://developers.google.com/admin-sdk/directory/v1/guides/search-users
-<QueryVaultCorpus> ::= <String> See: https://developers.google.com/vault/reference/rest/v1/matters.holds#CorpusQuery
+<QueryContact> ::= <String>
+        See: https://developers.google.com/google-apps/contacts/v3/reference#contacts-query-parameters-reference
+<QueryCrOS> ::= <String>
+        See: https://support.google.com/chrome/a/answer/1698333?hl=en
+<QueryDriveFile> ::= <String>
+        See: https://developers.google.com/drive/api/v2/search-files
+<QueryGmail> ::= <String>
+        See: https://support.google.com/mail/answer/7190
+<QueryGroup> ::= <String>
+        See: https://developers.google.com/admin-sdk/directory/v1/guides/search-groups
+<QueryMobile> ::= <String>
+        See: https://support.google.com/a/answer/7549103
+<QueryPrinter> ::= <String>
+        See: https://developers.google.com/cloud-print/docs/appInterfaces#search
+<QueryPrintJob> ::= <String>
+        See: https://developers.google.com/cloud-print/docs/appInterfaces#parameters_3
+<QueryUser> ::= <String>
+        See: https://developers.google.com/admin-sdk/directory/v1/guides/search-users
+<QueryVaultCorpus> ::= <String>
+        See: https://developers.google.com/vault/reference/rest/v1/matters.holds#CorpusQuery
 <RequestID> ::= <String>
 <ResourceID> ::= <String>
 <SchemaName> ::= <String>
 <Section> ::= <String>
 <SerialNumber> ::= <String>
 <SheetName> ::= <String>
-<SiteACLScope> ::= <EmailAddress>|user:<EmailAdress>|group:<EmailAddress>|domain:<DomainName>|domain|default
+<SiteACLScope> ::=
+        <EmailAddress>|user:<EmailAdress>|group:<EmailAddress>|
+        domain:<DomainName>|domain|default
 <SiteItem> ::= [<DomainName>/]<SiteName>
 <S/MIMEID> ::= <String>
 <SMTPHostName> ::= <String>
@@ -260,6 +304,7 @@ If an item contains spaces, it should be surrounded by ".
 <TeamDriveID> ::= <String>
 <ThreadID> ::= <String>
 <TimeZone> ::= <String>
+        See: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 <Title> ::= <String>
 <ToDriveAttribute> ::=
         (tduser <EmailAddress>)|
@@ -293,6 +338,7 @@ If an item contains spaces, it should be surrounded by ".
 <CourseStateList> ::= all|"<CourseState>(,<CourseState>)*"
 <CourseSubmissionIDList> ::= "<CourseSubmissionID>(,<CourseSubmissionID>)*"
 <CourseSubmissionStateList> ::= all|"<CourseSubmissionState>(,<CourseSubmissionState>)*"
+<CourseTopicIDList> ::= "<CourseTopicID>(,<CourseTopicID>)*"
 <CourseWorkIDList> ::= "<CourseWorkID>(,<CourseWorkID>)*"
 <CourseWorkStateList> ::= all|"<CourseWorkState>(,<CourseWorkState>)*"
 <CrOSIDList> ::= "<CrOSID>(,<CrOSID>)*"
@@ -306,6 +352,7 @@ If an item contains spaces, it should be surrounded by ".
 <EmailItemList> ::= "<EmailItem>(,<EmailItem>)*"
 <EventIDList> ::= "<EventID>(,<EventID>)*"
 <EventNameList> ::= "<EventName>(,<EventName>)*"
+<ExportStatusList> ::= "<ExportStatus>(,<ExportStatus>)*"
 <FeatureNameList> ::= "<FeatureName>(,<FeatureName>)*"
 <FieldNameList> ::= "<FieldName>(,<FieldName>)*"
 <FileFormatList> ::= "<FileFormat>(,<FileFormat)*"
@@ -317,6 +364,7 @@ If an item contains spaces, it should be surrounded by ".
 <LabelNameList> ::= "<LabelName>(,<LabelName)*"
 <LanguageList> ::= "<Language>(,<Language)*"
 <MatterItemList> ::= "<MatterItem>(,<MatterItem>)*"
+<MatterStateList> ::= "<MatterState>(,<MatterState>)*"
 <MessageIDList> ::= "<MessageID>(,<MessageID>)*"
 <MimeTypeList> ::= "<MimeType>(,<MimeType>)*"
 <MobileList> ::= "<MobileID>(,<MobileID>)*"
@@ -336,6 +384,7 @@ If an item contains spaces, it should be surrounded by ".
 <SiteACLScopeList> ::= "<SiteACLScope>(,<SiteACLScope>)*"
 <SiteList> ::= "<SiteItem>(,<SiteItem>)*"
 <SKUIDList> ="<SKUID>(,<SKUID>)*"
+<SMTPHeaderList> ::= "<SMTPDateHeader|SMTPHeader>(,<SMTPDateHeader|SMTPHeader>)*"
 <TeamDriveIDList> ::= "<TeamDriveID>(,<TeamDriveID>)*"
 <ThreadIDList> ::= "<ThreadID>(,<ThreadID>)*"
 <TimeList> ::= "<Time>(,<Time>)*"
@@ -373,19 +422,33 @@ Specify a collection of ChromeOS devices by directly specifying them or by speci
         (cros_ou_and_children|cros_org_and_children <OrgUnitItem>)|
         (cros_ous|cros_orgs <OrgUnitList>)|
         (cros_ous_and_children|cros_orgs_and_children <OrgUnitList>)|
-        (crosfile|crosfile_sn <FileName>|(gdoc <UserGoogleDoc>) [charset <Charset>] [delimiter <Character>])|
-        (datafile cros|cros_sn|cros_ous|cros_ous_and_children
-                <FileName>|(gdoc <UserGoogleDoc>) [charset <Charset>] [delimiter <Character>])|
         (crosquery <QueryCrOS>)|
         (crosqueries <QueryCrOSList>)|
-        (croscsvfile|croscsvfile_sn (<FileName>(:<FieldName>)+)|(gsheet(:<FieldName>)+ <UserGoogleSheet>) [charset <Charset>] [columndelimiter <Character>] [quotechar <Character>]
-                [fields <FieldNameList>] (matchfield|skipfield <FieldName> <RegularExpression>)* [delimiter <Character>])|
-        (csvkmd cros|cros_sn|cros_ous|cros_ous_and_children
-                <FileName>|(gsheet <UserGoogleSheet>) [charset <Charset>] [columndelimiter <Character>] [quotechar <Character>] [fields <FieldNameList>]
-                keyfield <FieldName> [keypattern <RegularExpression>] [keyvalue <String>] [delimiter <Character>]
-                subkeyfield <FieldName> [keypattern <RegularExpression>] [keyvalue <String>] [delimiter <Character>]
+        (crosfile|crosfile_sn
+                (<FileName>|(gdoc <UserGoogleDoc>)
+                        [charset <Charset>] [delimiter <Character>]))|
+        (croscsvfile|croscsvfile_sn
+                ((<FileName>(:<FieldName>)+)|(gsheet(:<FieldName>)+ <UserGoogleSheet>)
+                        [charset <Charset>] [columndelimiter <Character>] [quotechar <Character>])
+                [fields <FieldNameList>]
                 (matchfield|skipfield <FieldName> <RegularExpression>)*
-                [datafield <FieldName>(:<FieldName)* [delimiter <Character>]])|
+                [delimiter <Character>])|
+        (datafile cros|cros_sn|cros_ous|cros_ous_and_children
+                (<FileName>|(gdoc <UserGoogleDoc>) [charset <Charset>] [delimiter <Character>]))|
+        (csvdatafile cros|cros_sn|cros_ous|cros_ous_and_children
+                ((<FileName>(:<FieldName>)+)|(gsheet(:<FieldName>)+ <UserGoogleSheet>)
+                        [charset <Charset>] [columndelimiter <Character>] [quotechar <Character>])
+                [fields <FieldNameList>]
+                (matchfield|skipfield <FieldName> <RegularExpression>)*
+                [delimiter <Character>])|
+        (csvkmd cros|cros_sn|cros_ous|cros_ous_and_children
+                (<FileName>|(gsheet <UserGoogleSheet>) 
+                        [charset <Charset>] [columndelimiter <Character>] [quotechar <Character>])
+                 [fields <FieldNameList>]
+                (keyfield <FieldName> [keypattern <RegularExpression>] [keyvalue <String>] [delimiter <Character>])+
+                (subkeyfield <FieldName> [keypattern <RegularExpression>] [keyvalue <String>] [delimiter <Character>])
+                (matchfield|skipfield <FieldName> <RegularExpression>)*
+                (datafield <FieldName>(:<FieldName)* [delimiter <Character>])*)|
         (croscsvdata <FieldName>(:<FieldName>*))
 
 ## Collections of Users
@@ -393,13 +456,15 @@ Specify a collection of ChromeOS devices by directly specifying them or by speci
 Specify a collection of Users by directly specifying them or by specifiying items that will yield a list of users.
 
 <UserTypeEntity> ::=
-        (all users)|
+        (all users|users_ns|users_susp|users_ns_susp)|
         (user <UserItem>)|
         (users <UserList>)|
         (domains|domains_ns|domains_susp <DomainNameListList>)|
         (group|group_ns|group_susp <GroupItem>)|
         (groups|groups_ns|groups_susp <GroupList>)|
-        (group_users|group_users_ns|group_users_susp <GroupList> [members] [managers] [owners] [primarydomain] [domains <DomainNameList>] [recursive] end)|
+        (group_users|group_users_ns|group_users_susp <GroupList>
+                [members] [managers] [owners]
+                [primarydomain] [domains <DomainNameList>] [recursive] end)|
         (ou|ou_ns|ou_susp <OrgUnitItem>)|
         (ou_and_children|ou_and_children_ns|ou_and_children_susp <OrgUnitItem>)|
         (ous|ous_ns|ous_susp <OrgUnitList>)|
@@ -408,19 +473,41 @@ Specify a collection of Users by directly specifying them or by specifiying item
         (students <CourseIDList>)|
         (teachers <CourseIDList>)|
         (license|licenses|licence|licences <SKUIDList>)|
-        (file <FileName>|(gdoc <UserGoogleDoc>) [charset <Charset>] [delimiter <Character>])|
-        (datafile users|groups|groups_ns|groups_susp|ous|ous_ns|ous_susp|ous_and_children|ous_and_children_ns|ous_and_children_susp|courseparticipants|students|teachers
-                <FileName>|(gdoc <UserGoogleDoc>) [charset <Charset>] [delimiter <Character>])|
         (query <QueryUser>)|
         (queries <QueryUserList>)|
-        (csvfile (<FileName>(:<FieldName>)+)|(gsheet(:<FieldName>)+ <UserGoogleSheet>) [charset <Charset>] [columndelimiter <Character>] [quotechar <Character>] [fields <FieldNameList>]
-                (matchfield|skipfield <FieldName> <RegularExpression>)* [delimiter <Character>])|
-        (csvkmd users|groups|groups_ns_|groups_susp|ous|ous_ns|ous_susp|ous_and_children|ous_and_children_ns|ous_and_children_susp|courseparticipants|students|teachers
-                <FileName>|(gsheet <UserGoogleSheet>) [charset <Charset>] [columndelimiter <Character>] [quotechar <Character>] [fields <FieldNameList>]
-                keyfield <FieldName> [keypattern <RegularExpression>] [keyvalue <String>] [delimiter <Character>]
-                subkeyfield <FieldName> [keypattern <RegularExpression>] [keyvalue <String>] [delimiter <Character>]
+        (file
+                (<FileName>|(gdoc <UserGoogleDoc>)
+                        [charset <Charset>] [delimiter <Character>]))|
+        (csvfile
+                ((<FileName>(:<FieldName>)+)|(gsheet(:<FieldName>)+ <UserGoogleSheet>)
+                        [charset <Charset>] [columndelimiter <Character>] [quotechar <Character>])
+                [fields <FieldNameList>]
                 (matchfield|skipfield <FieldName> <RegularExpression>)*
-                [datafield <FieldName>(:<FieldName)* [delimiter <Character>]])|
+                [delimiter <Character>])|
+        (datafile users|groups|groups_ns|groups_susp|ous|ous_ns|ous_susp|
+                ous_and_children|ous_and_children_ns|ous_and_children_susp|
+                courseparticipants|students|teachers
+                (<FileName>|(gdoc <UserGoogleDoc>) [charset <Charset>] [delimiter <Character>]))|
+        (csvdatafile users|groups|groups_ns|groups_susp|ous|ous_ns|ous_susp|
+                ous_and_children|ous_and_children_ns|ous_and_children_susp|
+                courseparticipants|students|teachers
+                ((<FileName>(:<FieldName>)+)|(gsheet(:<FieldName>)+ <UserGoogleSheet>)
+                        [charset <Charset>] [columndelimiter <Character>] [quotechar <Character>])
+                [fields <FieldNameList>]
+                (matchfield|skipfield <FieldName> <RegularExpression>)*
+                [delimiter <Character>])|
+        (csvkmd users|groups|groups_ns_|groups_susp|ous|ous_ns|ous_susp|
+                ous_and_children|ous_and_children_ns|ous_and_children_susp|
+                courseparticipants|students|teachers
+                (<FileName>|(gsheet <UserGoogleSheet>)
+                        [charset <Charset>] [columndelimiter <Character>] [quotechar <Character>])
+                [fields <FieldNameList>]
+                (keyfield <FieldName> [keypattern <RegularExpression>] [keyvalue <String>]
+                        [delimiter <Character>])+
+                (subkeyfield <FieldName> [keypattern <RegularExpression>] [keyvalue <String>]
+                        [delimiter <Character>])*
+                (matchfield|skipfield <FieldName> <RegularExpression>)*
+                (datafield <FieldName>(:<FieldName)* [delimiter <Character>])*)|
         (csvdata <FieldName>(:<FieldName>*))
 
 ## Collections of Items
@@ -452,6 +539,7 @@ Specify a collection of items by directly specifying them; the item type is dete
 <CourseEntity> ::= <CourseIDList> | <FileSelector> | <CSVFileSelector> | <CSVkmdSelector>
 <CourseAnnouncementIDEntity> ::= <CourseAnnouncementIDList> | <FileSelector> | <CSVFileSelector> | <CSVkmdSelector> | <CSVSubkeySelector> | <CSVDataSelector>
 <CourseSubmissionIDEntity> ::= <CourseSubmissionIDList> | <FileSelector> | <CSVFileSelector> | <CSVDataSelector>
+<CourseTopicIDEntity> ::= <CourseTopicIDList> | <FileSelector> | <CSVFileSelector> | <CSVkmdSelector> | <CSVSubkeySelector> | <CSVDataSelector>
 <CourseWorkIDEntity> ::= <CourseWorkIDList> | <FileSelector> | <CSVFileSelector> | <CSVkmdSelector> | <CSVSubkeySelector> | <CSVDataSelector>
 <CrOSEntity> ::=
         <CrOSIDList> | (cros_sn <SerialNumberList>) |
@@ -531,6 +619,11 @@ verify
     Print the variable values for the selected section
     Values are determined in this order: Selected section, DEFAULT section, Program default
 
+## Select a filter section from gam.cfg and process a GAM command using values from that section
+The only <VariableName>s recognized in this <Section> are: csv_output_header_filter and csv_output_row_filter.
+<SelectFilter> ::=
+        selectfilter <Section>
+
 ## Set variables in gam.cfg.
 
 <Config> ::=
@@ -557,15 +650,15 @@ For redirect csv, the optional arguments must appear in the order shown.
         redirect stderr null [multiprocess] |
         redirect stderr stdout [multiprocess]
 
-<Select> <Config> <Redirect> must come before all other arguments and in this order,  ... indicates that additional GAM arguments may appear.
+<Select> <SelectFilter> <Config> <Redirect> must come before all other arguments and in this order,  ... indicates that additional GAM arguments may appear.
 
-gam [<Select>] [<Config>] [<Redirect>] ...
+gam [<Select>] [<SelectFilter>] [<Config>] [<Redirect>] ...
 
-<Select> <Config> <Redirect>] will not be shown in the following command descriptions but can be used with any Gam command.
+<Select> <SelectFilter> <Config> <Redirect>] will not be shown in the following command descriptions but can be used with any Gam command.
 
 # Version and Help
 
-gam version [check] [simple]
+gam version [check|checkrc|simple|extended] [timeoffset] [location <HostName>]
 gam help
 
 # Bulk Processing
@@ -592,7 +685,9 @@ gam <CrOSTypeEntity>|<UserTypeEntity> list [todrive <ToDriveAttribute>*] [data <
 # Authorization
 
 gam create|add project [<EmailAddress>] [<ProjectID>]
+gam create project [admin <EmailAddress>] [project <ProjectID>]
 gam use project [<EmailAddress>] [<ProjectID>]
+gam use project [admin <EmailAddress>] [project <ProjectID>]
 gam update project [<EmailAddress>] [gam|<ProjectID>|(filter <String>)]
 gam delete project [<EmailAddress>] [gam|<ProjectID>|(filter <String>)]
 gam show projects [<EmailAddress>] [all|gam|<ProjectID>|(filter <String>)]
@@ -600,7 +695,9 @@ gam print projects [<EmailAddress>] [all|gam|<ProjectID>|(filter <String>)] [tod
 
 gam oauth|oauth2 create|request [<EmailAddress>]
 gam oauth|oauth2 delete|revoke
-gam oauth|oauth2 info|verify [<AccessToken>]
+gam oauth|oauth2 refresh
+gam oauth|oauth2 update
+gam oauth|oauth2 info|verify [showsecret] [accesstoken <AccessToken> idtoken <IDToken>] [showdetails]
 gam oauth|oauth2 export [<FileName>]
 gam oauth|oauth2 import <FileName>
 
@@ -692,7 +789,10 @@ gam calendar|calendars <CalendarEntity> update <CalendarACLRole> ([user] <EmailA
 gam calendar|calendars <CalendarEntity> delete [<CalendarACLRole>] ([user] <EmailAddress>)|(group <EmailAddress>)|(domain [<DomainName>])|default
 gam calendar|calendars <CalendarEntity> showacl [formatjson]
 
-<EventSelectProperty:> ::=
+<AttendeeAttendance> ::= optional|required
+<AttendeeStatus> ::= accepted|declined|needsaction|tentative
+
+<EventSelectProperty> ::=
         (endtime|timemax <Time>)|
         (query <QueryCalendar>)|
         (privateextendedproperty <String>)|
@@ -703,9 +803,10 @@ gam calendar|calendars <CalendarEntity> showacl [formatjson]
         (starttime|timemin <Time>)|
         (updatedmin <Time>)
 
-<EventMatchProperty:> ::=
+<EventMatchProperty> ::=
         (matchfield attendees <EmailAddressEntity>)|
         (matchfield attendeespattern <RegularExpression>)|
+        (matchfield attendeesstatus [<AttendeeAttendance>] [<AttendeeStatus>] <EmailAddressEntity>)|
         (matchfield creatoremail <RegularExpression>)|
         (matchfield creatorname <RegularExpression>)|
         (matchfield description <RegularExpression>)|
@@ -721,11 +822,14 @@ gam calendar|calendars <CalendarEntity> showacl [formatjson]
         (id|eventid <EventId>)|(event|events <EventIdList> | <FileSelector> | <CSVFileSelector> | <CSVkmdSelector> | <CSVSubkeySelector> | <CSVDataSelector>)|
         (<EventSelectProperty>+ <EventMatchProperty>*)
 
+<AttendeeAttendance> ::= optional|required
+<AttendeeStatus> ::= accepted|declined|needsaction|tentative
+
 <EventAttribute> ::=
         (anyonecanaddself [<Boolean>])|
         (attachment <String> <URL>)|
         (attendee <EmailAddress>)|
-        (attendeestatus [optional] [accepted|declined|needsaction|tentative] <EmailAddress>)|
+        (attendeestatus [<AttendeeAttendance>] [<AttendeeStatus>] <EmailAddress>)|
         available|
         (colorindex|colorid <EventColorIndex>))|
         (description <String>)|
@@ -743,6 +847,7 @@ gam calendar|calendars <CalendarEntity> showacl [formatjson]
         (privateproperty <PropertyKey> <PropertyValue>)|
         (recurrence <RRULE, EXRULE, RDATE and EXDATE line>)|
         (reminder <Number> email|popup|sms))|
+        (sequence <Integer>)|
         (sharedproperty <PropertyKey> <PropertyValue>)|
         (source <String> <URL>)|
         (start (allday <Date>)|<Time>)|
@@ -778,7 +883,7 @@ The following attributes are equivalent:
 
 <EventUpdateAttribute> ::=
         <EventAttribute>|
-        <EventNotificationAttribute>
+        <EventNotificationAttribute>|
         clearattachments|
         (clearprivateproperty <PropertyKey>)|
         (clearsharedproperty <PropertyKey>)
@@ -882,14 +987,19 @@ gam calendar|calendars <CalendarEntity> empty calendartrash
         (orderby starttime|updated)|
         (timezone <TimeZone>)
 
-gam calendar|calendars <CalendarEntity> info events <EventEntity> [maxinstances <Number>] [fields <EventFieldNameList>] [formatjson]
-gam calendar|calendars <CalendarEntity> show events <EventSelectProperty>* <EventDisplayProperty>* [fields <EventFieldNameList>] [formatjson]
-gam calendar|calendars <CalendarEntity> print events <EventSelectProperty>* <EventDisplayProperty>* [fields <EventFieldNameList>]
-         [formatjson] [quotechar <Character>] [todrive <ToDriveAttribute>*]
+gam calendar|calendars <CalendarEntity> info events <EventEntity> [maxinstances <Number>] [fields <EventFieldNameList>]
+        [formatjson]
+gam calendar|calendars <CalendarEntity> show events <EventEntity> <EventDisplayProperty>* [fields <EventFieldNameList>]
+        [countsonly] [formatjson]
+gam calendar|calendars <CalendarEntity> print events <EventEntity> <EventDisplayProperty>* [fields <EventFieldNameList>]
+        [countsonly] [formatjson] [quotechar <Character>] [todrive <ToDriveAttribute>*]
 
-gam calendar|calendars <CalendarEntity> addevent <EventCreateAttribute>+
-gam calendar|calendars <CalendarEntity> deleteevent <EventEntity> [doit] [<EventNotificationAttribute>]
-gam calendar|calendars <CalendarEntity> wipe
+gam calendar <CalendarEntity> addevent <EventCreateAttribute>+
+gam calendar <CalendarEntity> deleteevent (id|eventid <EventID>)+ [doit] [notifyattendees|(sendnotifications <Boolean>)|(sendupdates all|externalonly|none)]
+gam calendar <CalendarEntity> moveevent (id|eventid <EventID>)+ destination <CalendarItem> [notifyattendees|(sendnotifications <Boolean>)|(sendupdates all|externalonly|none)]
+gam calendar <CalendarEntity> wipe
+gam calendar <CalendarEntity> printevents <EventSelectProperty>* <EventDisplayProperty>* [fields <EventFieldNameList>]
+         [formatjson] [quotechar <Character>] [todrive <ToDriveAttribute>*]
 
 <CalendarSettings> ::=
         (description <String>)|
@@ -910,6 +1020,9 @@ gam calendar|calendars <CalendarEntity> modify <CalendarSettings>+
         (org|ou <OrgUnitPath>)|
         (user <String>)
 
+gam update cros <CrOSEntity> <CrOSAttribute>+ [quickcrosmove [<Boolean>]]
+gam <CrOSTypeEntity> update <CrOSAttribute>+ [quickcrosmove [<Boolean>]]
+
 <CrOSAction> ::=
         deprovision_same_model_replace|
         deprovision_different_model_replace|
@@ -917,24 +1030,28 @@ gam calendar|calendars <CalendarEntity> modify <CalendarSettings>+
         disable|
         reenable
 
-gam update cros <CrOSEntity> (<CrOSAttribute>+ [quickcrosmove [<Boolean>]])|(action <CrOSAction> [acknowledge_device_touch_requirement])
-gam <CrOSTypeEntity> update (<CrOSAttribute>+ [quickcrosmove [<Boolean>]])|(action <CrOSAction> [acknowledge_device_touch_requirement])
+gam update cros <CrOSEntity> action <CrOSAction> [acknowledge_device_touch_requirement]
+gam <CrOSTypeEntity> update action <CrOSAction> [acknowledge_device_touch_requirement]
 
 <CrOSFieldName> ::=
         activetimeranges|timeranges|
-        annotatedassetid|assedid|asset|
+        annotatedassetid|assetid|asset|
         annotatedlocation|location|
         annotateduser|user|
+        autoupdateexpiration|
         bootmode|
         cpustatusreports|
         devicefiles|
         deviceid|
         diskvolumereports|
+        dockmacaddress|
         ethernetmacaddress|
+        ethernetmacaddress0|
         firmwareversion|
         lastenrollmenttime|
         lastsync|
         macaddress|
+        manufacturedate|
         meid|
         model|
         notes|
@@ -963,10 +1080,12 @@ gam <CrOSTypeEntity> update (<CrOSAttribute>+ [quickcrosmove [<Boolean>]])|(acti
 <CrOSOrderByFieldName> ::=
         lastsync|location|notes|serialnumber|status|supportenddate|user
 
-gam info cros <CrOSEntity> [nolists] [listlimit <Number>] [start <Date>] [end <Date>]
-        [basic|full|allfields] <CrOSFieldName>* [fields <CrOSFieldNameList>] [downloadfile latest|<Time>] [targetfolder <FilePath>] [formatjson]
-gam <CrOSTypeEntity> info [nolists] [listlimit <Number>] [start <Date>] [end <Date>]
-        [basic|full|allfields] <CrOSFieldName>* [fields <CrOSFieldNameList>] [downloadfile latest|<Time>] [targetfolder <FilePath>] [formatjson]
+gam info cros <CrOSEntity> [guessaue] [nolists] [listlimit <Number>] [start <Date>] [end <Date>]
+        [basic|full|allfields] <CrOSFieldName>* [fields <CrOSFieldNameList>]
+        [downloadfile latest|<Time>] [targetfolder <FilePath>] [formatjson]
+gam <CrOSTypeEntity> info [guessaue] [nolists] [listlimit <Number>] [start <Date>] [end <Date>]
+        [basic|full|allfields] <CrOSFieldName>* [fields <CrOSFieldNameList>]
+        [downloadfile latest|<Time>] [targetfolder <FilePath>] [formatjson]
 
 Print fields for selected CrOS devices; use these options to select CrOS devices:
         [(query <QueryCrOS>)|(queries <QueryCrOSList>)] [limittoou <OrgUnitItem>]
@@ -975,18 +1094,24 @@ If none of these options are chosen, all CrOS devices are selected.
 gam print cros [todrive <ToDriveAttribute>*]
         [(query <QueryCrOS>)|(queries <QueryCrOSList>)] [limittoou <OrgUnitItem>]
         (querytime.* <Time>)*
-        [orderby <CrOSOrderByFieldName> [ascending|descending]] [nolists|<CrOSListFieldName>*] [listlimit <Number>] [start <Date>] [end <Date>]
-        [basic|full|allfields] <CrOSFieldName>* [fields <CrOSFieldNameList>] [sortheaders] [formatjson] [quotechar <Character>]
+        [orderby <CrOSOrderByFieldName> [ascending|descending]] [guessaue] [nolists|<CrOSListFieldName>*]
+        [listlimit <Number>] [start <Date>] [end <Date>]
+        [basic|full|allfields] <CrOSFieldName>* [fields <CrOSFieldNameList>]
+        [sortheaders] [formatjson] [quotechar <Character>]
 
 Print fields for specified CrOS devices.
 
 gam print cros [todrive <ToDriveAttribute>*] select <CrOSTypeEntity>
-        [orderby <CrOSOrderByFieldName> [ascending|descending]] [nolists|<CrOSListFieldName>*] [listlimit <Number>] [start <Date>] [end <Date>]
-        [basic|full|allfields] <CrOSFieldName>* [fields <CrOSFieldNameList>] [sortheaders] [formatjson] [quotechar <Character>]
+        [orderby <CrOSOrderByFieldName> [ascending|descending]] [guessaue] [nolists|<CrOSListFieldName>*]
+        [listlimit <Number>] [start <Date>] [end <Date>]
+        [basic|full|allfields] <CrOSFieldName>* [fields <CrOSFieldNameList>]
+        [sortheaders] [formatjson] [quotechar <Character>]
 
 gam <CrOSTypeEntity> print cros [todrive <ToDriveAttribute>*]
-        [orderby <CrOSOrderByFieldName> [ascending|descending]] [nolists|<CrOSListFieldName>*] [listlimit <Number>] [start <Date>] [end <Date>]
-        [basic|full|allfields] <CrOSFieldName>* [fields <CrOSFieldNameList>] [sortheaders] [formatjson] [quotechar <Character>]
+        [orderby <CrOSOrderByFieldName> [ascending|descending]] [guessaue] [nolists|<CrOSListFieldName>*]
+        [listlimit <Number>] [start <Date>] [end <Date>]
+        [basic|full|allfields] <CrOSFieldName>* [fields <CrOSFieldNameList>]
+        [sortheaders] [formatjson] [quotechar <Character>]
 
 The first column will always be deviceId; the remaining field names will be sorted if allfields, basic, full or sortheaders is specified;
 otherwise, the remaining field names will appear in the order specified.
@@ -1010,15 +1135,22 @@ Print activity for selected CrOS devices; use these options to select CrOS devic
 If none of these options are chosen, all CrOS devices are selected.
 
 gam print crosactivity [todrive <ToDriveAttribute>*]
-        [(query <QueryCrOS>)|(queries <QueryCrOSList>)|(select <CrOSTypeEntity>)] [limittoou <OrgUnitItem>]
+        [(query <QueryCrOS>)|(queries <QueryCrOSList>)] [limittoou <OrgUnitItem>]
         (querytime.* <Time>)*
-        [orderby <CrOSOrderByFieldName> [ascending|descending]] [recentusers] [timeranges] [both] [devicefiles] [all] [listlimit <Number>] [start <Date>] [end <Date>]
+        [orderby <CrOSOrderByFieldName> [ascending|descending]] [recentusers] [timeranges] [both] [devicefiles] [all]
+        [listlimit <Number>] [start <Date>] [end <Date>]
         [delimiter <Character>] [formatjson] [quotechar <Character>]
 
 Print activity for specified CrOS devices.
 
+gam print crosactivity [todrive <ToDriveAttribute>*] select <CroSTypeEntity>
+        [orderby <CrOSOrderByFieldName> [ascending|descending]] [recentusers] [timeranges] [both] [devicefiles] [all]
+        [listlimit <Number>] [start <Date>] [end <Date>]
+        [delimiter <Character>] [formatjson] [quotechar <Character>]
+
 gam <CrOSTypeEntity> print crosactivity [todrive <ToDriveAttribute>*]
-        [orderby <CrOSOrderByFieldName> [ascending|descending]] [recentusers] [timeranges] [both] [devicefiles] [all] [listlimit <Number>] [start <Date>] [end <Date>]
+        [orderby <CrOSOrderByFieldName> [ascending|descending]] [recentusers] [timeranges] [both] [devicefiles] [all]
+        [listlimit <Number>] [start <Date>] [end <Date>]
         [delimiter <Character>] [formatjson] [quotechar <Character>]
 
 The basic column headers are: deviceId,annotatedAssetId,annotatedLocation,serialNumber,orgUnitPath.
@@ -1052,7 +1184,6 @@ gam <CrOSTypeEntity> get devicefile [select <DeviceFileEntity>] [targetfolder <F
         (billinginfo <String>)|
         (birthday <Date>)|
         (calendar clear|(work|home|free-busy|<String> <URL> notprimary|primary))|
-        (contactgroup clear|<ContactGroupItem>)|
         (directoryserver <String>)|
         (email clear|(work|home|other|<String> <EmailAddress> notprimary|primary))|
         (event clear|(anniversary|other|<String> <Date>))|
@@ -1096,6 +1227,7 @@ gam update contacts <ContactEntity>|<ContactSelection> <ContactAttribute>+
 gam clear contacts <ContactEntity>|<ContactSelection>
         [emailclearpattern <RegularExpression>] [emailcleartype work|home|other|<String>]
         [delete_cleared_contacts_with_no_emails]
+gam dedup contacts <ContactEntity>|<ContactSelection> [matchType [<Boolean>]]
 gam delete contacts <ContactEntity>|<ContactSelection>
 
 gam update contactphotos <ContactEntity>|<ContactSelection>
@@ -1161,11 +1293,13 @@ gam print contacts [todrive <ToDriveAttribute>*] <ContactSelection>
         [query <QueryContact>] [(selectcontactgroup <ContactGroupItem>)|selectothercontacts] [emailmatchpattern <RegularExpression>] [emailmatchtype work|home|other|<String>] [updated_min <Date>]
 
 gam <UserTypeEntity> create contact <ContactAttribute>+
-gam <UserTypeEntity> update contacts <ContactEntity> <ContactAttribute>+
-gam <UserTypeEntity> update contacts <UserContactSelection> endquery <ContactAttribute>+
+        (contactgroup <ContactGroupItem>)*
+gam <UserTypeEntity> update contacts <ContactEntity>|(<UserContactSelection> endquery) <ContactAttribute>+
+        (contactgroup <ContactGroupItem>)*|((addcontactgroup <ContactGroupItem>)* (removecontactgroup <ContactGroupItem>)*)
 gam <UserTypeEntity> clear contacts <ContactEntity>|<UserContactSelection>
         [emailclearpattern <RegularExpression>] [emailcleartype work|home|other|<String>]
         [delete_cleared_contacts_with_no_emails]
+gam <UserTypeEntity> dedup contacts <ContactEntity>|<UserContactSelection> [matchType [<Boolean>]]
 gam <UserTypeEntity> delete contacts <ContactEntity>|<UserContactSelection>
 
 gam <UserTypeEntity> info contacts <ContactEntity>
@@ -1252,13 +1386,24 @@ gam print gal [todrive <ToDriveAttribute>*] <ContactSelection>
 <CourseFieldNameList> ::= "<CourseFieldName>(,<CourseFieldName>)*"
 
 gam create|add course [id|alias <CourseAlias>] <CourseAttribute>*
-        [copyfrom <CourseID> [announcementstates <CourseAnnouncementStateList>] [workstates <CourseWorkStateList>] [members none|all|students|teachers]]
+        [copyfrom <CourseID>
+            [announcementstates <CourseAnnouncementStateList>]
+            [workstates <CourseWorkStateList>] [markpublishedasdraft [<Boolean>]] [removeduedate [<Boolean>]]
+            [copytopics [<Boolean>]]
+            [members none|all|students|teachers]]
 gam update course <CourseID> <CourseAttribute>+
-        [copyfrom <CourseID> [announcementstates <CourseAnnouncementStateList>] [workstates <CourseWorkStateList>] [members none|all|students|teachers]]
+        [copyfrom <CourseID>
+            [announcementstates <CourseAnnouncementStateList>]
+            [workstates <CourseWorkStateList>] [markpublishedasdraft [<Boolean>]] [removeduedate [<Boolean>]]
+            [copytopics [<Boolean>]]
+            [members none|all|students|teachers]]
 gam delete course <CourseID> [archive|archived]
 
 gam update courses <CourseEntity> <CourseAttribute>+
-        [copyfrom <CourseID> [announcementstates <CourseAnnouncementStateList>] [workstates <CourseWorkStateList>] [members none|all|students|teachers]]
+        [copyfrom <CourseID>
+            [announcementstates <CourseAnnouncementStateList>]
+            [workstates <CourseWorkStateList>] [markpublishedasdraft [<Boolean>]] [removeduedate [<Boolean>]]
+            [members none|all|students|teachers]]
 gam delete courses <CourseEntity> [archive|archived]
 
 gam course <CourseID> create|add alias <CourseAlias>
@@ -1281,11 +1426,13 @@ gam info course <CourseID> [owneremail] [alias|aliases] [show all|students|teach
         [fields <CourseFieldNameList>] [skipfields <CourseFieldNameList>] [formatjson]
 gam info courses <CourseEntity> [owneremail] [alias|aliases] [show all|students|teachers] [countsonly]
         [fields <CourseFieldNameList>] [skipfields <CourseFieldNameList>] [formatjson]
-gam print courses [todrive <ToDriveAttribute>*] (course|class <CourseEntity>)*|([teacher <UserItem>] [student <UserItem>] [states <CourseStateList>])
+gam print courses [todrive <ToDriveAttribute>*]
+        (course|class <CourseEntity>)*|([teacher <UserItem>] [student <UserItem>] [states <CourseStateList>])
         [owneremail] [owneremailmatchpattern <RegularExpression>] [alias|aliases] [delimiter <Character>] [show all|students|teachers] [countsonly]
         [fields <CourseFieldNameList>] [skipfields <CourseFieldNameList>] [formatjson] [quotechar <Character>]
         [timefilter creationtime|updatetime] [start|starttime <Date>|<Time>] [end|endtime <Date>|<Time>]
-gam print course-participants [todrive <ToDriveAttribute>*] (course|class <CourseEntity>)*|([teacher <UserItem>] [student <UserItem>] [states <CourseStateList>])
+gam print course-participants [todrive <ToDriveAttribute>*]
+        (course|class <CourseEntity>)*|([teacher <UserItem>] [student <UserItem>] [states <CourseStateList>])
         [show all|students|teachers] [formatjson] [quotechar <Character>]
 
 <CourseAnnouncementFieldName> ::=
@@ -1350,16 +1497,27 @@ gam print course-participants [todrive <ToDriveAttribute>*] (course|class <Cours
         worktype
 <CourseSubmissionFieldNameList> ::= "<CourseSubmissionFieldName>(,<CourseSubmissionFieldName>)*"
 
-gam print course-announcements [todrive <ToDriveAttribute>*] (course|class <CourseEntity>)*|([teacher <UserItem>] [student <UserItem>] states <CourseStateList>])
-        (announcementids <CourseAnnouncementIDEntity>)|((announcementstates <CourseAnnouncementStateList>)* (orderby <CourseAnnouncementOrderByFieldName> [ascending|descending])*)
+gam print course-announcements [todrive <ToDriveAttribute>*]
+        (course|class <CourseEntity>)*|([teacher <UserItem>] [student <UserItem>] states <CourseStateList>])
+        (announcementids <CourseAnnouncementIDEntity>)|((announcementstates <CourseAnnouncementStateList>)*
+        (orderby <CourseAnnouncementOrderByFieldName> [ascending|descending])*)
         [showcreatoremails] [fields <CourseAnnouncementFieldNameList>] [formatjson] [quotechar <Character>]
         [timefilter creationtime|updatetime|scheduledtime] [start|starttime <Date>|<Time>] [end|endtime <Date>|<Time>]
-gam print course-work [todrive <ToDriveAttribute>*] (course|class <CourseEntity>)*|([teacher <UserItem>] [student <UserItem>] states <CourseStateList>])
-        (workids <CourseWorkIDEntity>)|((workstates <CourseWorkStateList>)* (orderby <CourseWorkOrderByFieldName> [ascending|descending])*)
+gam print course-topics [todrive <ToDriveAttributes>*]
+        (course|class <CourseEntity>)*|([teacher <UserItem>] [student <UserItem>] states <CourseStateList>])
+        [topicids <CourseTopicIDEntity>]
+        [formatjson] [quotechar <Character>]
+        [timefilter updatetime] [start|starttime <Date>|<Time>] [end|endtime <Date>|<Time>]
+gam print course-work [todrive <ToDriveAttribute>*]
+        (course|class <CourseEntity>)*|([teacher <UserItem>] [student <UserItem>] states <CourseStateList>])
+        (workids <CourseWorkIDEntity>)|((workstates <CourseWorkStateList>)*
+        (orderby <CourseWorkOrderByFieldName> [ascending|descending])*)
         [showcreatoremails] [fields <CourseWorkFieldNameList>] [formatjson] [quotechar <Character>]
         [timefilter creationtime|updatetime|scheduledtime] [start|starttime <Date>|<Time>] [end|endtime <Date>|<Time>]
-gam print course-submissions [todrive <ToDriveAttribute>*] (course|class <CourseEntity>)*|([teacher <UserItem>] [student <UserItem>] states <CourseStateList>])
-        (workids <CourseWorkIDEntity>)|((workstates <CourseWorkStateList>)* (orderby <CourseWorkOrderByFieldName> [ascending|descending])*)
+gam print course-submissions [todrive <ToDriveAttribute>*]
+        (course|class <CourseEntity>)*|([teacher <UserItem>] [student <UserItem>] states <CourseStateList>])
+        (workids <CourseWorkIDEntity>)|((workstates <CourseWorkStateList>)*
+        (orderby <CourseWorkOrderByFieldName> [ascending|descending])*)
         (submissionids <CourseSubmissionIDEntity>)|((submissionstates <CourseSubmissionStateList>)*) [late|notlate]
         [fields <CourseSubmissionFieldNameList>] [formatjson] [quotechar <Character>] [showuserprofile]
         [timefilter creationtime|updatetime] [start|starttime <Date>|<Time>] [end|endtime <Date>|<Time>]
@@ -1505,11 +1663,9 @@ gam show domainaliases|aliasdomains [formatjson]
         (whocanpostmessage none_can_post|all_managers_can_post|all_members_can_post|all_owners_can_post|all_in_domain_can_post|anyone_can_post)|
         (whocanviewgroup anyone_can_view|all_in_domain_can_view|all_members_can_view|all_managers_can_view|all_owners_can_view)|
         (whocanviewmembership all_in_domain_can_view|all_members_can_view|all_managers_can_view|all_owners_can_view)
-<GroupWhoCanDiscoverGroupAttribute> ::=
-        (whocandiscovergroup allmemberscandiscover|allindomaincandiscover|anyonecandiscover)|
+<GroupWhoCanDiscoverGroupDeprecatedAttribute> ::=
         (showingroupdirectory <Boolean>)
-<GroupWhoCanAssistContentAttribute> ::=
-        (whocanassistcontent all_members|owners_and_managers|managers_only|owners_only|none)|
+<GroupWhoCanAssistContentDeprecatedAttribute> ::=
         (whocanassigntopics all_members|owners_and_managers|managers_only|owners_only|none)|
         (whocanenterfreeformtags all_members|owners_and_managers|managers_only|owners_only|none)|
         (whocanhideabuse all_members|owners_and_managers|managers_only|owners_only|none)|
@@ -1521,8 +1677,7 @@ gam show domainaliases|aliasdomains [formatjson]
         (whocantaketopics all_members|owners_and_managers|managers_only|owners_only|none)|
         (whocanunassigntopic all_members|owners_and_managers|managers_only|owners_only|none)|
         (whocanunmarkfavoritereplyonanytopic all_members|owners_and_managers|managers_only|owners_only|none)
-<GroupWhoCanModerateContentAttribute> ::=
-        (whocanmoderatecontent all_members|owners_and_managers|owners_only|none)|
+<GroupWhoCanModerateContentDeprecatedAttribute> ::=
         (whocanapprovemessages all_members|owners_and_managers|owners_only|none)|
         (whocandeleteanypost all_members|owners_and_managers|owners_only|none)|
         (whocandeletetopics all_members|owners_and_managers|owners_only|none)|
@@ -1530,8 +1685,7 @@ gam show domainaliases|aliasdomains [formatjson]
         (whocanmovetopicsin all_members|owners_and_managers|owners_only|none)|
         (whocanmovetopicsout all_members|owners_and_managers|owners_only|none)|
         (whocanpostannouncements all_members|owners_and_managers|owners_only|none)
-<GroupWhoCanModerateMembersAttribute> ::=
-        (whocanmoderatemembers all_members|owners_and_managers|owners_only|none)|
+<GroupWhoCanModerateMembersDeprecatedAttribute> ::=
         (whocanadd all_members_can_add|all_managers_can_add|none_can_add)|
         (whocanapprovemembers all_members_can_approve|all_managers_can_approve|all_owners_can_approve|none_can_approve)|
         (whocanbanusers all_members|owners_and_managers|owners_only|none)|
@@ -1547,22 +1701,41 @@ gam show domainaliases|aliasdomains [formatjson]
 <GroupAttribute> ::=
         (json [charset <Charset>] <JSONData>)|(json file <FileName> [charset <Charset>])|
         <GroupSettingsAttribute>|
-        <GroupWhoCanDiscoverGroupAttribute>|
-        <GroupWhoCanAssistContentAttribute>|
-        <GroupWhoCanModerateContentAttribute>|
-        <GroupWhoCanModerateMembersAttribute>|
+        (whocandiscovergroup allmemberscandiscover|allindomaincandiscover|anyonecandiscover)|
+        (whocanassistcontent all_members|owners_and_managers|managers_only|owners_only|none)|
+        (whocanmoderatecontent all_members|owners_and_managers|owners_only|none)|
+        (whocanmoderatemembers all_members|owners_and_managers|owners_only|none)|
+        <GroupWhoCanDiscoverGroupDeprecatedAttribute>|
+        <GroupWhoCanAssistContentDeprecatedAttribute>|
+        <GroupWhoCanModerateContentDeprecatedAttribute>|
+        <GroupWhoCanModerateMembersDeprecatedAttribute>|
         <GroupDeprecatedAttribute>
 
 gam create|add group <EmailAddress> [copyfrom <GroupItem>] <GroupAttribute>*
 gam update group|groups <GroupEntity> [admincreated <Boolean>] [email <EmailAddress>] [copyfrom <GroupItem>] <GroupAttribute>*
-gam update group|groups <GroupEntity> create|add [owner|manager|member] [usersonly|groupsonly] [notsuspended|suspended]
-        [[delivery] allmail|abridged|daily|digest|none|nomail|disabled] [preview] <UserTypeEntity>
-gam update group|groups <GroupEntity> delete|remove [owner|manager|member] [usersonly|groupsonly] [notsuspended|suspended] [preview] <UserTypeEntity>
-gam update group|groups <GroupEntity> sync [owner|manager|member] [usersonly|groupsonly] [addonly|removeonly] [notsuspended|suspended]
-        [[delivery] allmail|abridged|daily|digest|none|nomail|disabled] [preview] <UserTypeEntity>
-gam update group|groups <GroupEntity> update [owner|manager|member] [usersonly|groupsonly] [notsuspended|suspended]
-        [[delivery] allmail|abridged|daily|digest|none|nomail|disabled] [preview] [createifnotfound] <UserTypeEntity>
-gam update group|groups <GroupEntity> clear [member] [manager] [owner] [notsuspended|suspended] [preview]
+gam update group|groups <GroupEntity> create|add [owner|manager|member]
+        [usersonly|groupsonly] [notsuspended|suspended]
+        [[delivery] allmail|abridged|daily|digest|none|nomail|disabled]
+        [preview]
+        <UserTypeEntity>
+gam update group|groups <GroupEntity> delete|remove [owner|manager|member]
+        [usersonly|groupsonly] [notsuspended|suspended]
+        [preview]
+        <UserTypeEntity>
+gam update group|groups <GroupEntity> sync [owner|manager|member]
+        [usersonly|groupsonly] [addonly|removeonly] [notsuspended|suspended]
+        [[delivery] allmail|abridged|daily|digest|none|nomail|disabled]
+        [preview]
+        <UserTypeEntity>
+gam update group|groups <GroupEntity> update [owner|manager|member]
+        [usersonly|groupsonly] [notsuspended|suspended]
+        [[delivery] allmail|abridged|daily|digest|none|nomail|disabled]
+        [createifnotfound]
+        [preview]
+        <UserTypeEntity>
+gam update group|groups <GroupEntity> clear [member] [manager] [owner]
+        [notsuspended|suspended]
+        [preview]
 gam delete group|groups <GroupEntity>
 
 <GroupFieldName> ::=
@@ -1632,6 +1805,7 @@ gam info group|groups <GroupEntity> [members] [managers] [owners] [nousers|notsu
         [noaliases] [groups] [basic] <GroupFieldName>* [fields <GroupFieldNameList>] [nodeprecated] [formatjson]
 gam print groups [todrive <ToDriveAttribute>*] ([domain <DomainName>] ([member <UserItem>]|[query <QueryGroup>]))|[select <GroupEntity>] [notsuspended|suspended]
         [emailmatchpattern <RegularExpression>] [namematchpattern <RegularExpression>] [descriptionmatchpattern <RegularExpression>] (matchsetting [not] <GroupAttribute>)*
+        [showownedby <UserItem>]
         [maxresults <Number>] [allfields|([basic] [settings] <GroupFieldName>* [fields <GroupFieldNameList>])] [nodeprecated]
         [members|memberscount] [managers|managerscount] [owners|ownerscount] [countsonly]
         [convertcrnl] [delimiter <Character>] [sortheaders] [formatjson] [quotechar <Character>]
@@ -1654,12 +1828,14 @@ gam info member|group-members <UserTypeEntity> <GroupEntity>
 gam print group-members [todrive <ToDriveAttribute>*]
         [domain <DomainName>] ([member <UserItem>]|[query <QueryGroup>]))|[group|group_ns|group_susp <GroupItem>]|[select <GroupEntity>] [notsuspended|suspended]
         [emailmatchpattern <RegularExpression>] [namematchpattern <RegularExpression>] [descriptionmatchpattern <RegularExpression>]
+        [showownedby <UserItem>]
         [roles <GroupRoleList>] [members] [managers] [owners] [membernames] <MembersFieldName>* [fields <MembersFieldNameList>]
         [userfields <UserFieldNameList>] [recursive [noduplicates]] [nogroupemail]
         [peoplelookup|(peoplelookupuser <EmailAddress>)]
 gam show group-members
         ([domain <DomainName>] ([member <UserItem>]|[query <QueryGroup>]))|[group|group_ns|group_susp <GroupItem>]|[select <GroupEntity>] [notsuspended|suspended]
         [emailmatchpattern <RegularExpression>] [namematchpattern <RegularExpression>] [descriptionmatchpattern <RegularExpression>]
+        [showownedby <UserItem>]
         [roles <GroupRoleList>] [members] [managers] [owners] [depth <Number>]
 
 # Licenses
@@ -1678,7 +1854,9 @@ gam show licenses [(products|product <ProductIDList>)|(skus|sku <SKUIDList>)|all
         cancel_remote_wipe_then_block
 
 gam update mobile <MobileEntity> action <MobileAction>
+        [doit] [matchusers <UserTypeEntity>]
 gam delete mobile <MobileEntity>
+        [doit] [matchusers <UserTypeEntity>]
 
 <MobileFieldName> ::=
         adbstatus|
@@ -1847,20 +2025,23 @@ gam print printjob|printjobs [todrive <ToDriveAttribute>*] [printer|printerid <P
 # Reports
 
 <ActivityApplicationName> ::=
+        access|accesstransparency|
         admin|
         calendar|calendars|
-        doc|docs|
-        drive|
+        drive|doc|docs|
+        enterprisegroups|groupsenterprise|
+        google+|gplus|
         group|groups|
+        hangoutsmeet|meet|
         login|logins|
         mobile|
+        oauthtoken|token|tokens|
         rules|
         saml|
-        token|tokens|
         useraccounts
 
 gam report <ActivityApplicationName> [todrive <ToDriveAttributes>*]
-        [user all|<UserItem>] [select <UserTypeEntity>]
+        [(user all|<UserItem>)|(orgunit|org|ou <OrgUnitPath>)|(select <UserTypeEntity>)]
         [([start <Time>] [end <Time>])|(range <Time> <Time>)|yesterday]
         [filtertime.* <Time>] [filter|filters <String>]
         [event|events <EventNameList>] [ip <String>]
@@ -1937,13 +2118,32 @@ gam print resoldsubscriptions [todrive <ToDriveAttribute>*] [customerid <Custome
 
 # Resource Calendars
 
+<BuildingFieldName> ::=
+        address|
+        buildingid|
+        buildingname|
+        coordinates|
+        description|
+        floors|
+        floornames|
+        id|
+        name
+<BuildingFieldNameList> ::= "<BuildingFieldName>(,<BuildingFieldName>)*"
+
 <BuildingAttribute> ::=
+        (address|addresslines <String>)|
+        (city|locality <String>)|
+        (country|regioncode <String>)|
         (description <String>)|
         (floors <FloorNameList>)|
         (id <String>)|
+        (language|languageCode <Language>)|
         (latitude <Float>)|
         (longitude <Float>)|
         (name <String>)
+        (state|administrativearea <String>)|
+        (sublocality <String>)|
+        (zipcode|postalcode <String>)
 
 <ResourceAttribute> ::=
         (buildingid <BuildingID>)|
@@ -1986,8 +2186,9 @@ gam create|add building <Name> <BuildingAttribute>*
 gam update building <BuildIngID> <BuildingAttribute>*
 gam delete building <BuildingID>
 gam info building <BuildingID>
-gam show buildings
-gam print buildings [todrive <ToDriveAttribute>*] [delimiter <Character>]
+gam show buildings [allfields|<BuildingFildName>*|(fields <BuildingFieldNameList>)]
+gam print buildings [todrive <ToDriveAttribute>*] [allfields|<BuildingFildName>*|(fields <BuildingFieldNameList>)]
+        [delimiter <Character>]
 
 gam create|add feature name <Name>
 gam update feature <Name> name <Name>
@@ -2005,8 +2206,10 @@ gam delete resources <ResourceEntity>
 gam info resources <ResourceEntity> [acls] [calendar] [formatjson]
 
 gam show resources [allfields|<ResourceFieldName>*|(fields <ResourceFieldNameList>)]
+        [query <String>]
         [acls] [calendar] [convertcrnl] [formatjson]
 gam print resources [todrive <ToDriveAttribute>*] [allfields|<ResourceFieldName>*|(fields <ResourceFieldNameList>)]
+        [query <String>]
         [acls] [calendar] [convertcrnl] [formatjson] [quotechar <Character>]
 
 <CalendarACLRole> ::= editor|freebusy|freebusyreader|owner|reader|writer|none
@@ -2051,9 +2254,18 @@ gam print schema|schemas [todrive <ToDriveAttribute>*]
 
 gam sendemail <EmailAddressEntity> [from <UserItem>] [replyto <EmailAddress>]
         [cc <EmailAddressEntity>] [bcc <EmailAddressEntity>] [singlemessage [<Boolean>]]
-        [subject <String>] [message <String>|(file <FileName> [charset <CharSet>])]
-        (replace <Tag> <String>)* [html [<Boolean>]] (attach <FileName>)*
-        [newuser <UserItem> firstname|givenname <String> lastname|familyname <string> password <Password>]
+        [subject <String>]
+        (textmessage|message <String>)|(textfile|file <FileName> [charset <CharSet>])
+        (htmlmessage <String>)|(htmlfile <FileName> [charset <CharSet>])
+        (replace <Tag> <String>)* [html [<Boolean>]] (attach <FileName> [charset <CharSet>])*
+        [newuser <EmailAddress> firstname|givenname <String> lastname|familyname <string> password <Password>]
+gam <UserTypeEntity> sendemail [recipient|to <EmailAddressEntity>] [replyto <EmailAddress>]
+        [cc <EmailAddressEntity>] [bcc <EmailAddressEntity>] [singlemessage [<Boolean>]]
+        [subject <String>]
+        (textmessage|message <String>)|(textfile|file <FileName> [charset <CharSet>])
+        (htmlmessage <String>)|(htmlfile <FileName> [charset <CharSet>])
+        (replace <Tag> <String>)* [html [<Boolean>]] (attach <FileName> [charset <CharSet>])*
+        [newuser <EmailAddress> firstname|givenname <String> lastname|familyname <string> password <Password>]
 
 # Sites
 
@@ -2172,43 +2384,44 @@ gam [<UserTypeEntity>] print siteacls <SiteEntity> [todrive <ToDriveAttribute>*]
 # Vault
 
 gam create vaultexport|export matter <MatterItem> [name <String>] corpus drive|mail|groups|hangouts_chat
-        (accounts <EmailAddressEntity>) | (orgunit|org|ou <OrgUnitPath>) | (teamdrives <TeamDriveIDList>) | (rooms <RoomList>) | everyone
+        (accounts <EmailAddressEntity>) | (orgunit|org|ou <OrgUnitPath>) | (shareddrives|teamdrives <TeamDriveIDList>) | (rooms <RoomList>) | everyone
         [scope <all_data|held_data|unprocessed_data>]
         [terms <String>] [start|starttime <Date>|<Time>] [end|endtime <Date>|<Time>] [timezone <TimeZone>]
-        [excludedrafts <Boolean>] [format mbox|pst]
+        [excludedrafts <Boolean>] [format mbox|pst] [showconfidentialmodecontent <Boolean>]
         [includerooms <Boolean>]
-        [includeteamdrives <Boolean>] [driveversiondate <Date>|<Time>]
-        [includeaccessinfo <Boolean>]
-        [showdetails]
+        [includeshareddrives|includeteamdrives <Boolean>] [driveversiondate <Date>|<Time>] [includeaccessinfo <Boolean>]
+        [region any|europe|us] [showdetails]
 gam delete vaultexport|export <ExportItem> matter <MatterItem>
 gam delete vaultexport|export <MatterItem> <ExportItem>
-gam download vaultexport|export <ExportItem> matter <MatterItem> [targetfolder <FilePath>] [noverify] [noextract] [ziptostdout]
-gam download vaultexport|export <MatterItem> <ExportItem> [targetfolder <FilePath>] [noverify] [noextract] [ziptostdout]
+gam download vaultexport|export <ExportItem> matter <MatterItem> [targetfolder <FilePath>] [targetname <FileName>] [noverify] [noextract] [ziptostdout]
+gam download vaultexport|export <MatterItem> <ExportItem> [targetfolder <FilePath>] [targetname <FileName>] [noverify] [noextract] [ziptostdout]
 gam info vaultexport|export <ExportItem> matter <MatterItem>
 gam info vaultexport|export <MatterItem> <ExportItem>
-gam show vaultexports|exports [matter|matters <MatterItemList>] [shownames]
-gam print vaultexports|exports [todrive <ToDriveAttribute>*] [matter|matters <MatterItemList>] [shownames]
+gam print vaultexports|exports [todrive <ToDriveAttributes>*]
+        [matters <MatterItemList>] [exportstatus <ExportStatusList>] [shownames]
+gam show vaultexports|exports
+        [matters <MatterItemList>] [exportstatus <ExportStatusList>] [shownames]
 
 gam create vaulthold|hold matter <MatterItem> [name <String>] corpus drive|mail|groups|hangouts_chat
         [(accounts|groups|users <EmailItemList>) | (orgunit|org|ou <OrgUnit>)]
         [query <QueryVaultCorpus>]
         [terms <String>] [start|starttime <Date>|<Time>] [end|endtime <Date>|<Time>]
         [includerooms <Boolean>]
-        [includeteamdrives <Boolean>]
+        [includeshareddrives|includeteamdrives <Boolean>]
         [showdetails]
 gam update vaulthold|hold <HoldItem> matter <MatterItem>
         [([addaccounts|addgroups|addusers <EmailItemList>] [removeaccounts|removegroups|removeusers <EmailItemList>]) | (orgunit|org|ou <OrgUnit>)]
         [query <QueryVaultCorpus>]
         [terms <String>] [start|starttime <Date>|<Time>] [end|endtime <Date>|<Time>]
         [includerooms <Boolean>]
-        [includeteamdrives <Boolean>]
+        [includeshareddrives|includeteamdrives <Boolean>]
         [showdetails]
 gam delete vaulthold|hold <HoldItem> matter <MatterItem>
 gam delete vaulthold|hold <MatterItem> <HoldItem>
 gam info vaulthold|hold <HoldItem> matter <MatterItem> [shownames]
 gam info vaulthold|hold <MatterItem> <HoldItem> [shownames]
-gam show vaultholds|holds [matter|matters <MatterItemList>] [shownames]
-gam print vaultholds|holds [todrive <ToDriveAttribute>*] [matter|matters <MatterItemList>] [shownames]
+gam print vaultholds|holds [todrive <ToDriveAttributes>*] [matters <MatterItemList>] [shownames]
+gam show vaultholds|holds [matters <MatterItemList>] [shownames]
 
 gam create|add vaultmatter|matter [name <String>] [description <string>]
         [collaborator|collaborators <EmailItemList>] [sendemails <Boolean>] [ccme <Boolean>]
@@ -2221,8 +2434,8 @@ gam reopen vaultmatter|matter <MatterItem>
 gam delete vaultmatter|matter <MatterItem>
 gam undelete vaultmatter|matter <MatterItem>
 gam info vaultmatter|matter <MatterItem>
-gam show vaultmatters|matters [basic|full]
-gam print vaultmatters|matters [todrive <ToDriveAttribute>*] [basic|full]
+gam print vaultmatters|matters [todrive <ToDriveAttributes>*] [basic|full] [matterstate <MatterStateList>]
+gam show vaultmatters|matters [basic|full] [matterstate <MatterStateList>]
 
 # Users
 
@@ -2257,6 +2470,8 @@ gam print vaultmatters|matters [todrive <ToDriveAttribute>*] [basic|full]
         phones|phone|
         posixaccounts|posix|
         primaryemail|username|
+        recoveryemail|
+        recoveryphone|
         relations|relation|
         sshpublickeys|ssh|sshkeys|
         suspended|
@@ -2282,6 +2497,8 @@ gam print vaultmatters|matters [todrive <ToDriveAttribute>*] [basic|full]
         (note clear|([text_html|text_plain] <String>|(file <FileName> [charset <Charset>])))|
         (org|ou|orgunitpath <OrgUnitPath>)
         (password random|<Password>)|
+        (recoveryemail <EmailAddress>)|
+        (recoveryphone <string>)|
         (suspended <Boolean>)|
         (<SchemaName>.<FieldName> [multivalued|multivalue|value|multinonempty [type home|other|work|(custom <String>)]] <String>)
 <UserMultiAttribute> ::=
@@ -2308,12 +2525,15 @@ gam print vaultmatters|matters [todrive <ToDriveAttribute>*] [basic|full]
 
 gam create|add user <EmailAddress> <UserAttribute>*
         [notify <EmailAddress>] [subject <String>] [message <String>|(file <FileName> [charset <CharSet>])] [html [<Boolean>]]
+        (replace <Tag> <UserReplacement>)*
 gam update user <UserItem> <UserAttribute>*
         [updateprimaryemail <RegularExpression> <EmailReplacement>]
         [updateoufromgroup <FileName> [charset <String>] [columndelimiter <Character>] [quotechar <Character>] [fields <FieldNameList>]
             [keyfield <FieldName>] [datafield <FieldName>]]
         [clearschema <SchemaName>] [clearschema <SchemaName>.<FieldName>]
-        [createifnotfound] [notify <EmailAddress>] [subject <String>] [message <String>|(file <FileName> [charset <CharSet>])] [html [<Boolean>]]
+        [createifnotfound]
+        [notify <EmailAddress>] [subject <String>] [message <String>|(file <FileName> [charset <CharSet>])] [html [<Boolean>]]
+        (replace <Tag> <UserReplacement>)*
 gam delete user <UserItem>
 gam undelete user <UserItem> [org|ou <OrgUnitPath>]
 gam suspend user <UserItem>
@@ -2324,7 +2544,9 @@ gam info user [<UserItem>] [quick] [noaliases] [nogroups] [nolicenses|nolicences
 
 gam update users <UserTypeEntity> <UserAttribute>* [updateprimaryemail <RegularExpression> <EmailReplacement>]
         [clearschema <SchemaName>] [clearschema <SchemaName>.<FieldName>]
-        [createifnotfound] [notify <EmailAddress>] [subject <String>] [message <String>|(file <FileName> [charset <CharSet>])] [html [<Boolean>]]
+        [createifnotfound]
+        [notify <EmailAddress>] [subject <String>] [message <String>|(file <FileName> [charset <CharSet>])] [html [<Boolean>]]
+        (replace <Tag> <UserReplacement>)*
 gam delete users <UserTypeEntity>
 gam undelete users <UserEntity> [org|ou <OrgUnitPath>]
 gam suspend users <UserTypeEntity>
@@ -2335,7 +2557,9 @@ gam info users <UserTypeEntity> [quick] [noaliases] [nogroups] [nolicenses|nolic
 
 gam <UserTypeEntity> update users <UserAttribute>* [updateprimaryemail <RegularExpression> <EmailReplacement>]
         [clearschema <SchemaName>] [clearschema <SchemaName>.<FieldName>]
-        [createifnotfound] [notify <EmailAddress>] [subject <String>] [message <String>|(file <FileName> [charset <CharSet>])]
+        [createifnotfound]
+        [notify <EmailAddress>] [subject <String>] [message <String>|(file <FileName> [charset <CharSet>])]
+        (replace <Tag> <UserReplacement>)*
 gam <UserTypeEntity> delete users
 gam <UserEntity> undelete users [org|ou <OrgUnitPath>]
 gam <UserTypeEntity> suspend users
@@ -2423,6 +2647,7 @@ gam <UserTypeEntity> show backupcodes|verificationcodes
 
 <UserCalendarAddEntity> ::=
         <EmailAddress>|
+        <UniqueID>|
         (courses <CourseIDList>)|
         ((courses_with_teacher <UserItem>)|my_courses_as_teacher [coursestates <CourseStateList>])|
         ((courses_with_student <UserItem>)|my_courses_as_student [coursestates <CourseStateList>])|
@@ -2434,6 +2659,7 @@ gam <UserTypeEntity> show backupcodes|verificationcodes
         allcalendars|
         primary|
         <EmailAddress>|
+        <UniqueID>|
         (courses <CourseIDList>)|
         ((courses_with_teacher <UserItem>)|my_courses_as_teacher [coursestates <CourseStateList>])|
         ((courses_with_student <UserItem>)|my_courses_as_student [coursestates <CourseStateList>])|
@@ -2473,7 +2699,7 @@ gam <UserTypeEntity> info calendars <UserCalendarEntity> [formatjson]
 gam <UserTypeEntity> show calendars [permissions]
          [primary] <CalendarSelectProperty>* [noprimary] [nogroups] [noresources] [nosystem] [nousers]
          [formatjson]
-gam <UserTypeEntity> print calendars <[todrive <ToDriveAttribute>*] [permissions]
+gam <UserTypeEntity> print calendars [todrive <ToDriveAttribute>*] [permissions]
          [primary] <CalendarSelectProperty>* [noprimary] [nogroups] [noresources] [nosystem] [nousers]
          [formatjson] [delimiter <Character>] [quotechar <Character>]
 
@@ -2503,7 +2729,10 @@ gam <UserTypeEntity> transfer calendars <UserItem> <UserCalendarEntity>
         <CalendarSettings>] [append description|location|summary] [noupdatemessages]
 gam <UserTypeEntity> transfer seccals <UserItem> [keepuser] [sendnotifications <Boolean>]
 
-<EventSelectProperty:> ::=
+<AttendeeAttendance> ::= optional|required
+<AttendeeStatus> ::= accepted|declined|needsaction|tentative
+
+<EventSelectProperty> ::=
         (endtime|timemax <Time>)|
         (query <QueryCalendar>)|
         (privateextendedproperty <String>)|
@@ -2514,9 +2743,10 @@ gam <UserTypeEntity> transfer seccals <UserItem> [keepuser] [sendnotifications <
         (starttime|timemin <Time>)|
         (updatedmin <Time>)
 
-<EventMatchProperty:> ::=
+<EventMatchProperty> ::=
         (matchfield attendees <EmailAddressEntity>)|
         (matchfield attendeespattern <RegularExpression>)|
+        (matchfield attendeesstatus [<AttendeeAttendance>] [<AttendeeStatus>] <EmailAddressEntity>)|
         (matchfield creatoremail <RegularExpression>)|
         (matchfield creatorname <RegularExpression>)|
         (matchfield description <RegularExpression>)|
@@ -2533,6 +2763,7 @@ gam <UserTypeEntity> transfer seccals <UserItem> [keepuser] [sendnotifications <
         (anyonecanaddself [<Boolean>])|
         (attachment <String> <URL>)|
         (attendee <EmailAddress>)|
+        (attendeestatus [<AttendeeAttendance>] [<AttendeeStatus>] <EmailAddress>)|
         available|
         (colorindex|colorid <EventColorIndex>))|
         (description <String>)|
@@ -2561,9 +2792,23 @@ gam <UserTypeEntity> transfer seccals <UserItem> [keepuser] [sendnotifications <
         (transparency opaque|transparent)|
         (visibility default|public|private)
 
+The following attributes are equivalent:
+        available - transparency transparent
+        guestscantinviteothers - guestscaninviteothers False
+        guestscantseeothers - guestscanseeotherguests False
+        tentative - status tentative
+
+<EventNotificationAttribute> ::=
+        notifyattendees|(sendnotifications <Boolean>)|(sendupdates all|enternalonly|none)
+
+The following attributes are equivalent:
+        notifyattendees - sendupdates all
+        sendnotifications false - sendupdates none
+        sendnotifications true - sendupdates all
+
 <EventCreateAttribute> ::=
         <EventAttribute>|
-        notifyattendees|(sendnotifications <Boolean>)
+        <EventNotificationAttribute>
 
 <EventImportAttribute> ::=
         <EventAttribute>|
@@ -2572,16 +2817,10 @@ gam <UserTypeEntity> transfer seccals <UserItem> [keepuser] [sendnotifications <
 
 <EventUpdateAttribute> ::=
         <EventAttribute>|
-        notifyattendees|(sendnotifications <Boolean>)|
+        <EventNotificationAttribute>|
         clearattachments|
         (clearprivateproperty <PropertyKey>)|
         (clearsharedproperty <PropertyKey>)
-
-The following attributes are equivalent:
-        available = transparency transparent
-        guestscantinviteothers = guestscaninviteothers False
-        guestscantseeothers = guestscanseeotherguests False
-        tentative = status tentative
 
 Add update and delete events in any calendar for which a user has access
 
@@ -2601,13 +2840,25 @@ gam <UserTypeEntity> empty calendartrash <UserCalendarEntity>
         (orderby starttime|updated)|
         (timezone <TimeZone>)
 
-gam <UserTypeEntity> info events <UserCalendarEntity> <EventEntity> [maxinstances <Number>] [fields <EventFieldNameList>] [formatjson]
-gam <UserTypeEntity> show events <UserCalendarEntity> <EventSelectProperty>* <EventDisplayProperty>* [fields <EventFieldNameList>] [formatjson]
-gam <UserTypeEntity> print events <UserCalendarEntity> <EventSelectProperty>* <EventDisplayProperty>* [fields <EventFieldNameList>]
-         [formatjson] [quotechar <Character>] [todrive <ToDriveAttribute>*]
+gam <UserTypeEntity> info events <UserCalendarEntity> <EventEntity> [maxinstances <Number>] [fields <EventFieldNameList>]
+        [formatjson]
+gam <UserTypeEntity> show events <UserCalendarEntity> <EventEntity> <EventDisplayProperty>* [fields <EventFieldNameList>]
+        [countsonly] [formatjson]
+gam <UserTypeEntity> print events <UserCalendarEntity> <EventEntity> <EventDisplayProperty>* [fields <EventFieldNameList>]
+        [countsonly] [formatjson] [quotechar <Character>] [todrive <ToDriveAttribute>*]
 
-gam <UserTypeEntity> update calattendees <UserCalendarEntity> <EventEntity> [anyorganizer]
-        (csv <FileName>|(gsheet <UserGoogleSheet>))* (add <EmailAddress>)* (delete <EmailAddress>)* (replace <EmailAddress> <EmailAddress>)* [doit]
+gam <UserTypeEntity> update calattendees <UserCalendarEntity> <EventEntity> [anyorganizer] [<EventNotificationAttribute>] [doit]
+        (csv <FileName>|(gsheet <UserGoogleSheet>))*
+        (delete <EmailAddress>)*
+        (deleteentity <EmailAddressEntity>)*
+        (add <EmailAddress>)*
+        (addentity <EmailAddressEntity>)*
+        (addstatus [<AttendeeAttendance>] [<AttendeeStatus>] <EmailAddress>)*
+        (addentitystatus [<AttendeeAttendance>] [<AttendeeStatus>] <EmailAddressEntity>)*
+        (replace <EmailAddress> <EmailAddress>)*
+        (replacestatus [<AttendeeAttendance>] [<AttendeeStatus>] <EmailAddress> <EmailAddress>)*
+        (updatestatus [<AttendeeAttendance>] [<AttendeeStatus>] <EmailAddress>)*
+        (updateentitystatus [<AttendeeAttendance>] [<AttendeeStatus>] <EmailAddressEntity>)*
 
 # Users - Drive
 
@@ -2730,16 +2981,38 @@ gam <UserTypeEntity> untrash drivefile <DriveFileEntity>
 <DriveFilePermissionList> ::= "<DriveFilePermission>(,<DriveFilePermission)*"
 <DriveFilePermissionIDList> ::= "<DriveFilePermissionID>(,<DriveFilePermissionID>)*"
 
+<DrivePermissionsFieldName> ::=
+        additionalroles|
+        allowfilediscovery|
+        deleted|
+        permissiondetails|
+        displayname|
+        domain|
+        emailaddress|
+        expirationdate|
+        expirationtime|
+        id|
+        name|
+        photolink|
+        role|
+        type|
+        withlink
+<DrivePermissionsFieldNameList> ::= "<DrivePermissionsFieldName>(,<DrivePermissionsFieldName>)*"
+
 gam <UserTypeEntity> create|add drivefileacl <DriveFileEntity> anyone|(user <UserItem>)|(group <GroupItem>)|(domain <DomainName>)
         (role <DriveFileACLRole>) [withlink|(allowfilediscovery|discoverable [<Boolean>])] [expires|expiration <Time>] [sendemail] [emailmessage <String>] [showtitles] [nodetails]
 gam <UserTypeEntity> update drivefileacl <DriveFileEntity> <DriveFilePermissionIDorEmail>
         (role <DriveFileACLRole>) [expires|expiration <Time>] [removeexpiration [<Boolean>]] [showtitles] [nodetails]
 gam <UserTypeEntity> delete drivefileacl <DriveFileEntity> <DriveFilePermissionIDorEmail> [showtitles]
 gam <UserTypeEntity> info drivefileacl <DriveFileEntity> <DriveFilePermissionIDorEmail> [showtitles] [formatjson]
-gam <UserTypeEntity> show drivefileacl <DriveFileEntity> [oneitemperrow] [showtitles] [formatjson]
+gam <UserTypeEntity> show drivefileacls <DriveFileEntity>
+        [oneitemperrow] [showtitles] [<DrivePermissionsFieldName>*|(fields <DrivePermissionsFieldNameList>)]
         (orderby <DriveFileOrderByFieldName> [ascending|descending])*
-gam <UserTypeEntity> print drivefileacls <DriveFileEntity> [todrive <ToDriveAttribute>*] [oneitemperrow] [showtitles] [formatjson] [quotechar <Character>]
+        [formatjson]
+gam <UserTypeEntity> print drivefileacls <DriveFileEntity> [todrive <ToDriveAttributes>*]
+        [oneitemperrow] [showtitles] [<DrivePermissionsFieldName>*|(fields <DrivePermissionsFieldNameList>)]
         (orderby <DriveFileOrderByFieldName> [ascending|descending])*
+        [formatjson] [quotechar <Character>]
 gam <UserTypeEntity> create|add permissions <DriveFileEntity> <DriveFilePermissionEntity> [expires|expiration <Time>] [sendemail] [emailmessage <String>]
 gam <UserTypeEntity> delete permissions <DriveFileEntity> <DriveFilePermissionIDEntity>
 
@@ -2940,7 +3213,7 @@ gam <UserTypeEntity> print filecounts [todrive <ToDriveAttribute>*] [anyowner|(s
 
 gam <UserTypeEntity> print|show filelist [todrive <ToDriveAttribute>*] [anyowner|(showownedby any|me|others)]
         [((query <QueryDriveFile>) | (fullquery <QueryDriveFile>) | <DriveFileQueryShortcut>) |
-          (select <DriveFileEntityListTree> [selectsubquery <QueryDriveFile>] [depth <Number>] [showparent])]
+          (select <DriveFileEntityListTree> [selectsubquery <QueryDriveFile>] [norecursion|(depth <Number>)] [showparent])]
         (querytime.* <Time>)* [maxfiles <Integer>]
         [showmimetype [not] <MimeTypeList>] [minimumfilesize <Integer>] [filenamematchpattern <RegularExpression>]
         (<PermissionMatch>)* [<PermissionMatchMode>] [<PermissionMatchAction>]
@@ -3030,13 +3303,13 @@ gam <UserTypeEntity> print delegates|delegate [todrive <ToDriveAttribute>*] [sho
 
 <FilterCriteria> ::=
         excludechats|
-        (from <EmailAddress>)|
+        (from <String>)|
         (haswords|query <List>)|
         (musthaveattachment|hasattachment)|
         (nowords|negatedquery <List>)|
         (size larger|smaller <ByteCount>)|
         (subject <String>)|
-        (to <EmailAddress>)
+        (to <String>)
 
 <FilterAction> ::=
         archive|
@@ -3173,13 +3446,22 @@ gam <UserTypeEntity> print labels|label [onlyuser [<Boolean>]] [showcounts [<Boo
         x400-trace
 <SMTPHeaderList> ::= "<SMTPDateHeader|SMTPHeader>(,<SMTPDateHeader|SMTPHeader>)*"
 
-gam <UserTypeEntity> import message (<SMTPDateHeader> <Time>)* (<SMTPHeader> <String>)* (header <String> <String>)* (addlabel <LabelName>)*
-        (textmessage <String>)|(textfile <FileName> [charset <CharSet>]) (htmlmessage <String>)|(htmlfile <FileName> [charset <CharSet>])
-        (replace <Tag> <UserReplacement>)* (attach <FileName>)*
-        [deleted [<Boolean>]] [nevermarkspam [<Boolean>]] [processforcalendar [<Boolean>]]
-gam <UserTypeEntity> insert message (<SMTPDateHeader> <Time>)* (<SMTPHeader> <String>)* (header <String> <String>)* (addlabel <LabelName>)*
-        (textmessage <String>)|(textfile <FileName> [charset <CharSet>]) (htmlmessage <String>)|(htmlfile <FileName> [charset <CharSet>])
-        (replace <Tag> <UserReplacement>)* (attach <FileName>)*
+gam <UserTypeEntity> draft message (<SMTPDateHeader> <Time>)* (<SMTPHeader> <String>)*
+        (header <String> <String>)*
+        (textmessage|message <String>)|(textfile|file <FileName> [charset <CharSet>])
+        (htmlmessage <String>)|(htmlfile <FileName> [charset <CharSet>])
+        (replace <Tag> <UserReplacement>)* (attach <FileName> [charset <CharSet>])*
+gam <UserTypeEntity> import message (<SMTPDateHeader> <Time>)* (<SMTPHeader> <String>)*
+        (header <String> <String>)* (addlabel <LabelName>)* [labels <LabelNameLisr>]
+        (textmessage|message <String>)|(textfile|file <FileName> [charset <CharSet>])
+        (htmlmessage <String>)|(htmlfile <FileName> [charset <CharSet>])
+        (replace <Tag> <UserReplacement>)* (attach <FileName> [charset <CharSet>])*
+        [deleted [<Boolean>]] [checkspam [<Boolean>]] [processforcalendar [<Boolean>]]
+gam <UserTypeEntity> insert message (<SMTPDateHeader> <Time>)* (<SMTPHeader> <String>)*
+        (header <String> <String>)* (addlabel <LabelName>)* [labels <LabelNameLisr>]
+        (textmessage|message <String>)|(textfile|file <FileName> [charset <CharSet>])
+        (htmlmessage <String>)|(htmlfile <FileName> [charset <CharSet>])
+        (replace <Tag> <UserReplacement>)* (attach <FileName> [charset <CharSet>])*
         [deleted [<Boolean>]]
 
 gam <UserTypeEntity> archive messages <GroupItem> (((query <QueryGmail>) (matchlabel <LabelName>) [or|and])+ [quick|notquick] [doit] [max_to_archive|max_to_process <Number>])|(ids <MessageIDEntity>)
@@ -3251,6 +3533,8 @@ gam <UserTypeEntity> webclips <Boolean>
 
 gam <UserTypeEntity> add groups [owner|manager|member] <GroupEntity>
 gam <UserTypeEntity> delete groups [<GroupEntity>]
+gam <UserTypeEntity> print groups [roles <GroupRoleList>] [domain <DomainName>] [todrive <ToDriveAttributes>*]
+gam <UserTypeEntity> show groups [roles <GroupRoleList>] [domain <DomainName>]
 
 # Users - Licenses
 

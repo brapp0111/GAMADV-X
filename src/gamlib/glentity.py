@@ -31,6 +31,11 @@ class GamEntity(object):
   ROLE_MEMBER_OWNER = ','.join([ROLE_MEMBER, ROLE_OWNER])
   ROLE_MANAGER_MEMBER_OWNER = ','.join([ROLE_MANAGER, ROLE_MEMBER, ROLE_OWNER])
 
+  TYPE_CUSTOMER = 'CUSTOMER'
+  TYPE_EXTERNAL = 'EXTERNAL'
+  TYPE_GROUP = 'GROUP'
+  TYPE_USER = 'USER'
+
 # Keys into NAMES; arbitrary values but must be unique
   ACCESS_TOKEN = 'atok'
   ACCOUNT = 'acct'
@@ -70,19 +75,24 @@ class GamEntity(object):
   CONTACT = 'cont'
   CONTACT_GROUP = 'cogr'
   CONTACT_GROUP_NAME = 'cogn'
+  COPYFROM_COURSE = 'cfco'
   COURSE = 'cour'
   COURSE_ALIAS = 'coal'
   COURSE_ANNOUNCEMENT_ID = 'caid'
   COURSE_ANNOUNCEMENT_STATE = 'cast'
+  COURSE_MATERIAL_FORM = 'comf'
   COURSE_NAME = 'cona'
   COURSE_STATE = 'cost'
   COURSE_SUBMISSION_ID = 'csid'
   COURSE_SUBMISSION_STATE = 'csst'
+  COURSE_TOPIC = 'ctop'
+  COURSE_TOPIC_ID = 'ctoi'
   COURSE_WORK_ID = 'cwid'
   COURSE_WORK_STATE = 'cwst'
   CREATOR_ID = 'crid'
   CREDENTIALS = 'cred'
   CRITERIA = 'crit'
+  CROS_AUE_DATES_JSON_FILE = 'caue'
   CROS_DEVICE = 'cros'
   CUSTOMER_DOMAIN = 'cudo'
   CUSTOMER_ID = 'cuid'
@@ -177,6 +187,7 @@ class GamEntity(object):
   RESOURCE_ID = 'resi'
   ROLE = 'role'
   ROLE_ASSIGNMENT_ID = 'raid'
+  ROW = 'row '
   SCOPE = 'scop'
   SECTION = 'sect'
   SENDAS_ADDRESS = 'sasa'
@@ -268,19 +279,24 @@ class GamEntity(object):
     CONTACT: ['Contacts', 'Contact'],
     CONTACT_GROUP: ['Contact Groups', 'Contact Group'],
     CONTACT_GROUP_NAME: ['Contact Group Names', 'Contact Group Name'],
+    COPYFROM_COURSE: ['Copy From Courses', 'CopyFrom Course'],
     COURSE: ['Courses', 'Course'],
     COURSE_ALIAS: ['Course Aliases', 'Course Alias'],
     COURSE_ANNOUNCEMENT_ID: ['Course Announcement IDs', 'Course Announcement ID'],
     COURSE_ANNOUNCEMENT_STATE: ['Course Announcement States', 'Course Announcement State'],
+    COURSE_MATERIAL_FORM: ['Course Material Forms', 'Course Material Form'],
     COURSE_NAME: ['Course Names', 'Course Name'],
     COURSE_STATE: ['Course States', 'Course State'],
     COURSE_SUBMISSION_ID: ['Course Submission IDs', 'Course Submission ID'],
     COURSE_SUBMISSION_STATE: ['Course Submission States', 'Course Submission State'],
+    COURSE_TOPIC: ['Course Topics', 'Course Topic'],
+    COURSE_TOPIC_ID: ['Course Topic IDs', 'Course Topic ID'],
     COURSE_WORK_ID: ['Course Work IDs', 'Course Work ID'],
     COURSE_WORK_STATE: ['Course Work States', 'Course Work State'],
     CREATOR_ID: ['Creator IDs', 'Creator ID'],
     CREDENTIALS: ['Credentials', 'Credentials'],
     CRITERIA: ['Criteria', 'Criteria'],
+    CROS_AUE_DATES_JSON_FILE: ['ChromeOS AUE Dates File', 'ChromeOS AUE Dates File'],
     CROS_DEVICE: ['CrOS Devices', 'CrOS Device'],
     CUSTOMER_DOMAIN: ['Customer Domains', 'Customer Domain'],
     CUSTOMER_ID: ['Customer IDs', 'Customer ID'],
@@ -375,6 +391,7 @@ class GamEntity(object):
     RESOURCE_ID: ['Resource IDs', 'Resource ID'],
     ROLE: ['Roles', 'Role'],
     ROLE_ASSIGNMENT_ID: ['Role Assignment IDs', 'Role Assignment ID'],
+    ROW: ['Rows', 'Row'],
     SCOPE: ['Scopes', 'Scope'],
     SECTION: ['Sections', 'Section'],
     SENDAS_ADDRESS: ['SendAs Addresses', 'SendAs Address'],
@@ -395,12 +412,12 @@ class GamEntity(object):
     STUDENT: ['Students', 'Student'],
     TARGET_USER: ['Target Users', 'Target User'],
     TEACHER: ['Teachers', 'Teacher'],
-    TEAMDRIVE: ['TeamDrives', 'TeamDrive'],
-    TEAMDRIVE_ACL: ['TeamDrive ACLs', 'TeamDrive ACL'],
-    TEAMDRIVE_FOLDER: ['TeamDrive Folders', 'TeamDrive Folder'],
-    TEAMDRIVE_ID: ['TeamDrive IDs', 'TeamDrive ID'],
-    TEAMDRIVE_NAME: ['TeamDrive Names', 'TeamDrive Name'],
-    TEAMDRIVE_THEME: ['TeamDrive Themes', 'TeamDrive Theme'],
+    TEAMDRIVE: ['Shared Drives', 'Shared Drive'],
+    TEAMDRIVE_ACL: ['Shared Drive ACLs', 'Shared Drive ACL'],
+    TEAMDRIVE_FOLDER: ['Shared Drive Folders', 'Shared Drive Folder'],
+    TEAMDRIVE_ID: ['Shared Drive IDs', 'Shared Drive ID'],
+    TEAMDRIVE_NAME: ['Shared Drive Names', 'Shared Drive Name'],
+    TEAMDRIVE_THEME: ['Shared Drive Themes', 'Shared Drive Theme'],
     THREAD: ['Threads', 'Thread'],
     TOKEN: ['Tokens', 'Token'],
     TRANSFER_APPLICATION: ['Transfer Applications', 'Transfer Application'],
@@ -439,7 +456,6 @@ class GamEntity(object):
     self.forWhom = None
     self.preQualifier = ''
     self.postQualifier = ''
-    self.showTotal = False
 
   def SetGetting(self, entityType):
     self.entityType = entityType
@@ -468,12 +484,6 @@ class GamEntity(object):
 
   def GettingForWhom(self):
     return self.forWhom
-
-  def SetGettingShowTotal(self, showTotal):
-    self.showTotal = showTotal
-
-  def GettingShowTotal(self):
-    return self.showTotal
 
   def Choose(self, entityType, count):
     return self._NAMES[entityType][[0, 1][count == 1]]

@@ -4,7 +4,7 @@ rm -rf dist
 rm -rf gamadv-x-$1-linux-$(arch).tar.xz
 
 export LD_LIBRARY_PATH=/usr/local/lib
-pyinstaller2.7 --clean -F --distpath=gamadv-x linux-gam.spec
+pyinstaller2.7 --clean --noupx --strip -F --distpath=gamadv-x linux-gam.spec
 cp LICENSE gamadv-x
 cp license.rtf gamadv-x
 cp Gam*.txt gamadv-x
